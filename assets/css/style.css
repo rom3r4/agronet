@@ -1,0 +1,230 @@
+html.js input.form-autocomplete {
+  background-position: 100% 8px;
+}
+html.js input.throbbing { 
+  background-position: 100% -13px;
+}
+.node-teaser h2 {
+  display:inline-block;
+}
+.node-teaser>a>img{
+  width:30px;
+  height:30px;
+}
+div.pagination.pagination-centered ul {
+ display: -webkit-inline-flex;
+ display: inline-table;
+}
+div.panel-pane div.node-resource-agrisap,
+div.panel-pane div.node-resource-dc {
+  margin-top: 2em;
+}
+div.panel-pane div.node-teaser {
+  background-color: #F5F5F5;
+  margin-bottom: 1.5em;
+  padding: 0.5em;
+  border-bottom: 1px solid #DDD;
+}
+div#comments div.comment {
+  background-color: #F5F5F5;
+  margin-bottom: 1.5em;
+  padding: 0.5em;
+  border-bottom: 1px solid #DDD;
+  
+}
+div#comments > h2 {
+  display:inline-block;
+  font-size:1.5em;
+}
+div#comments div.comment > h2 {
+  display:inline-block;
+  color:red;
+}
+
+div#comments  h3 {
+  display:inline-block;
+}
+
+div#comments div.comment a>img{
+  width:35px;
+  height:25px;
+}
+
+.voa3r-video {
+  min-width:500px;
+}
+/**** hidden elemments ****/
+#edit-comment-body-und-0-format,
+#edit-og-group-ref,
+.full-form {
+  display:none;
+}
+/**** hidden elemments ****/
+
+.martop1{
+  margin-top:1em;
+}
+.martop15{
+  margin-top:1.5em;
+}
+.marbot1{
+  margin-botton:1em;
+}
+.marlef1{
+  margin-left:1em;
+}
+.marrig1{
+  margin-right:1em;
+}
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+height: 230px;
+margin: 0 auto;
+}
+.panelizer-view-mode.node.node-teaser > h2 {
+    font-size: 21px;
+    line-height: 21px;
+}
+div.panelizer-view-mode.node.node-teaser.node-resource-dc h2 {
+    font-size: 19px;
+    line-height: 19px;
+}
+#featured {
+  background-color: whitesmoke;
+  border-bottom: 1px solid #e5e5e5;
+}
+#featured p u {
+  text-decoration: none;
+  border-bottom: 2px solid grey;
+}
+#featured p u a {
+  text-decoration: none;
+}
+#carousel {
+  height: 300px;
+  margin-bottom: 0;
+}
+#carousel .item {
+  height: 240px;
+  padding: 60px 10% 0 10%;
+  text-align: center;
+  width: 80%;
+}
+#carousel .item h1 {
+  font-size: 60px;
+  font-weight: 200;
+  line-height: 1;
+  letter-spacing: -1px;  
+  margin-bottom: 20px;
+}
+#carousel .item p {
+  font-size: 24px;
+  font-weight: 200;
+  line-height: 1.25;
+  margin-bottom: 20px;
+}
+#carousel .carousel-control {
+  background-color: transparent;
+  border: 0;
+  color: #333;
+  font-size: 100px;
+  line-height: 100px;
+  top: 50%;
+  height: 100px;
+  margin-top: -50px;
+}
+#header {
+  background-color: whitesmoke;
+  border-bottom: 1px solid #e5e5e5;
+  padding-top: 20px;
+}
+#main {
+  padding: 30px 0;
+}
+#main .block {
+  margin-bottom: 30px;
+}
+#sidebar-first > .region {
+  padding-right: 10px;
+}
+#sidebar-second > .region {
+  padding-left: 10px;
+}
+.sidebar input.form-text {
+  width: 70%;
+}
+#footer {
+  background-color: whitesmoke;
+  border-top: 1px solid #e5e5e5;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+.footer-links a {
+  margin-left: 15px;
+}
+.block > h2 {
+  text-transform: uppercase;
+  color: #999;
+  font-size: 1.4em;
+  font-weight: normal;
+}
+
+
+/* Tags */
+
+.field-tags {
+  margin: 2em 0 2em 0;
+}
+.field-tags a.badge {
+  background: #08c;
+  border: 1px solid #08c;
+  margin-bottom: .4em;
+}
+.field-tags a.badge:not(:hover) {
+  background: snow;
+  border: 1px solid #ddd;
+  border-bottom-color: #bbb;
+  color: grey;
+  text-shadow: none;
+}
+
+
+form.search-form input {
+    width: 100%;
+}
+.pane-views-panes > h2,
+.pane-block > h2 {
+    text-transform: uppercase;
+    color: #999;
+    font-size: 1.4em;
+    font-weight: normal;
+}
+
+div#overlay {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: #858585 1px 1px 4px;
+    -moz-box-shadow: #858585 1px 1px 4px;
+    box-shadow: #858585 1px 1px 4px;
+}
+.user-picture,
+.views-field-picture{
+    background: #FFF;
+    display: inline-block;
+    padding: 4px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: #858585 1px 1px 4px;
+    -moz-box-shadow: #858585 1px 1px 4px;
+    box-shadow: #858585 1px 1px 4px;
+    line-height: 0;
+}
+#navbar #search-form,
+#navbar #search-form--2{
+    display: none;
+}
