@@ -1,3 +1,45 @@
+#navbar .input-append input, 
+#navbar .input-append select, 
+#navbar .input-append .uneditable-input {
+  -webkit-border-radius: 3px 0 0 3px;
+  -moz-border-radius: 3px 0 0 3px;
+  border-radius: 3px 0 0 3px;
+}
+
+.panels-flexible-region-2col33_66-center {
+  margin-top:1.5em;
+}
+div.panel-pane.pane-pm-existing-pages #search-form {
+  display: block;
+}
+#search-form,
+#navbar #search-form--2{
+    display: none;
+}
+.panel-pane #search-form2 {
+  margin-top:1.5em;
+}
+form#search-form2 { 
+  margin-right: 10px;
+}
+input#edit-keys {
+  width: 235px;
+}
+.not-visible{
+  visibility: hidden;
+}
+#navbar .input-append .add-on:last-child, 
+#navbar .input-append .btn:last-child, 
+#navbar .input-append .btn-group:last-child>.dropdown-toggle {
+  -webkit-border-radius: 0 3px 3px 0; 
+  -moz-border-radius: 0 3px 3px 0;
+  border-radius: 0 3px 3px 0;
+}
+#navbar .input-append, 
+#navbar .input-prepend {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
 html.js input.form-autocomplete {
   background-position: 100% 8px;
 }
@@ -224,7 +266,4 @@ div#overlay {
     box-shadow: #858585 1px 1px 4px;
     line-height: 0;
 }
-#navbar #search-form,
-#navbar #search-form--2{
-    display: none;
-}
+
