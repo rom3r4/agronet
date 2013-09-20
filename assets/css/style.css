@@ -18,6 +18,9 @@ div.pane-page-content form.comment-form
  
 }
 
+.stMainServices.st-sharethis-counter {
+  display:none;
+}
 div.warning, table tr.warning {
   background-color: #FCF8E3 !important;
   border: 1px solid #FBEED5 !important;
