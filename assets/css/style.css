@@ -144,10 +144,11 @@ div.panel-pane div.node-resource-dc {
   margin-top: 2em;
 }
 
-div.panel-pane div.views-row-odd div.node-teaser {
+div.panel-pane div.views-row-even div.node-teaser {
   /*background-color: #e6e6e6;*/
   background-color: rgba(182, 215, 168, 0.47);
   border-bottom-color: #CCC;
+  border: 1px solid #FFF;
   
 }
 div.panel-pane div.node-teaser {
@@ -155,10 +156,14 @@ div.panel-pane div.node-teaser {
   margin-bottom: 1em;
   padding: 0.5em;
   border-bottom: 1px solid #DDD;
+  border-top:1px solid #fff;
+  border-left:1px solid #fff;
+  border-right:1px solid #fff;
+  
 }
 div.panel-pane div.node-teaser:hover {
   border:1px solid #ccc;
-  box-shadow: 0 0 10px 5px #E2E2E2;
+  box-shadow: 0 0 15px 1px #E2E2E2;
 }
 div#comments div.comment {
   background-color: #F5F5F5;
