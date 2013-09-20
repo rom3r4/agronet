@@ -18,9 +18,19 @@ div.pane-page-content form.comment-form
  
 }
 
+div.rate-average {
+  display:inline-block;
+  line-height:1px;
+} 
+/** sharethis icon remove **/
+span.st_sharethis_hcount,
 .stMainServices.st-sharethis-counter {
   display:none;
 }
+.sharethis {
+  float: left;
+}
+
 div.warning, table tr.warning {
   background-color: #FCF8E3 !important;
   border: 1px solid #FBEED5 !important;
@@ -135,8 +145,10 @@ div.panel-pane div.node-resource-dc {
 }
 
 div.panel-pane div.views-row-odd div.node-teaser {
-  background-color: #e6e6e6;
+  /*background-color: #e6e6e6;*/
+  background-color: rgba(182, 215, 168, 0.47);
   border-bottom-color: #CCC;
+  
 }
 div.panel-pane div.node-teaser {
   background-color: #F5F5F5;
