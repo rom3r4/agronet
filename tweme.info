@@ -33,7 +33,7 @@ regions[sidebar_second_affix] = Sidebar second affixed
 regions[footer] = Footer
 
 ; Information added by drupal.org packaging script on 2013-06-29
-version = "7.x-1.2-alpha1"
+version = "7.x-1.2-alpha1-voa3r"
 core = "7.x"
 project = "tweme"
 datestamp = "1372529459"

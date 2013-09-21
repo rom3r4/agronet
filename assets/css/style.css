@@ -161,9 +161,14 @@ div.panel-pane div.node-teaser {
   border-right:1px solid #fff;
   
 }
+div.panel-pane div.views-row-even div.node-teaser:hover {
+  border:1px solid #ccc;
+  /*box-shadow: 0 0 15px 1px #E2E2E2;*/
+}
+
 div.panel-pane div.node-teaser:hover {
   border:1px solid #ccc;
-  box-shadow: 0 0 15px 1px #E2E2E2;
+  /*box-shadow: 0 0 15px 1px #E2E2E2;*/
 }
 div#comments div.comment {
   background-color: #F5F5F5;
