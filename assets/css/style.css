@@ -34,13 +34,17 @@ div.panel-pane div.node-resource-agrisap, div.panel-pane div.node-resource-dc{
 #edit-preview {
   display:none;
 }
-.search-result-snippet {
-
+.inline-block {
+  display:inline-block;
+}
+.left {
+  float:left;
 }
 .search-result-snippet div.profile h3 {
   display:none;	
 }
 
+#content div.pane-views,
 div.pane-page-content div.pane-block,
 div.pane-page-content div.pane-views-panes,
 div.pane-page-content div.pane-custom,
@@ -247,11 +251,15 @@ border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
 
+input#edit-cancel:hover,
+input#edit-cancel--2:hover,
 .flag-abuse-user a:hover{
 /** bnt-danger **/
   color: #ffffff;
   background-color: #bd362f;
 }
+input#edit-cancel,
+input#edit-cancel--2,
 .flag-abuse-user a{
 /** bnt-danger **/
   color: #ffffff;
