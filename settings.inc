@@ -1,6 +1,6 @@
 <?php
 
-set_time_limit(120);
+set_time_limit(3600);
 
 /**
  * Uncomment these lines  to use MEMCACHE and VARNISH servers (if available in OS)
