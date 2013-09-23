@@ -20,19 +20,19 @@ fi
 
 
 # Root
-R="root=${1}"
+R="--root=${1}"
 
 # Clear all caches
 
-drush cc all -y
+drush $R cc all -y
 
 # beware module orders
 
 # Disable
-drush pm-disable -y navbar
-drush pm-disable -y breakpoints
+drush $R pm-disable -y navbar
+drush $R pm-disable -y breakpoints
 
 
 
 # Uninstall
-drush pm-uninstall -y navbar
+drush $R pm-uninstall -y navbar
