@@ -1,3 +1,19 @@
+/** css redefinition **/
+#content div.form-item, 
+#content div.form-actions {
+  margin-top: 0.5em;
+}
+#content .form-actions {
+  margin-top: 0;
+}
+#navbar div.user-picture a>img,
+.image30_30 {
+  width: 15px;
+  height: 15px;
+  margin:0;
+  padding:0;
+  
+}
 /** search result snippets **/
 .search-result-wrapper {
   padding: 0.5em 0.5em 0 0.5em;
@@ -45,7 +61,9 @@ div.panel-pane div.node-resource-agrisap, div.panel-pane div.node-resource-dc{
 }
 
 #content div.pane-views,
+#content div.pane-block,
 div.pane-page-content div.pane-block,
+div.pane-page-content div.pane-views,
 div.pane-page-content div.pane-views-panes,
 div.pane-page-content div.pane-custom,
 div.pane-page-content section.bg,
@@ -414,14 +432,14 @@ div.panel-pane div.node-resource-dc {
   margin-top: 2em;
 }
 /** home page search snippets **/
-div.panel-pane.pane-commons-bw-posts div.views-row-even div.node-teaser {
+#quicktabs-container-commons_bw div.views-row-even div.node-teaser {
   /*background-color: #e6e6e6;*/
   background-color: rgba(182, 215, 168, 0.47);
   border-bottom-color: #CCC;
   border: 1px solid #FFF;
   
 }
-div.panel-pane.pane-commons-bw-posts div.node-teaser {
+#quicktabs-container-commons_bw div.node-teaser {
   background-color: #F5F5F5;
   margin-bottom: 1em;
   padding: 0.5em;
@@ -431,12 +449,13 @@ div.panel-pane.pane-commons-bw-posts div.node-teaser {
   border-right:1px solid #fff;
   
 }
-div.panel-pane.pane-commons-bw-posts div.views-row-even div.node-teaser:hover {
+
+#quicktabs-container-commons_bw div.views-row-even div.node-teaser:hover {
   border:1px solid #ccc;
   /*box-shadow: 0 0 15px 1px #E2E2E2;*/
 }
 
-div.panel-pane.pane-commons-bw-posts div.node-teaser:hover {
+#quicktabs-container-commons_bw div.node-teaser:hover {
   border:1px solid #ccc;
   /*box-shadow: 0 0 15px 1px #E2E2E2;*/
 }

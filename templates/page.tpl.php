@@ -1,12 +1,9 @@
 <?php
-
 /**
  * @file
  * Custom theme implementation to display a single Drupal page.
  */
-
 ?>
-
 <!-- Navbar -->
 <div id="navbar" class="navbar navbar-medium navbar-inverse navbar-static-top">
 	<div class="navbar-inner">
@@ -92,8 +89,5 @@
       <p>
           The research within the project VOA3R leading to these results has received funding from the ICT Policy Support Programme (ICT PSP), Theme 4 - Open access to scientific information, grant agreement n 250525 - All rights reserved
       </p>
-
-
 	</div>
-
 </footer>
