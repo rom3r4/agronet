@@ -1,0 +1,24 @@
+name = Commons Follow (Groups)
+description = Lets users follow individual organic groups.
+core = 7.x
+package = Commons - Building blocks
+php = 5.2.4
+project = commons_follow
+dependencies[] = ctools
+dependencies[] = flag
+dependencies[] = og
+dependencies[] = strongarm
+datestamp = 1352387638
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:1
+features[flag][] = commons_follow_group
+features[flag][] = email_group
+features[variable][] = message_subscribe_og
+
+
+; Information added by drush on 2013-09-23
+version = "7.x-3.3+1521-dev"
+core = "7.x"
+project = "commons"
+datestamp = "1379893126"
+

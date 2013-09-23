@@ -20,19 +20,35 @@ fi
 
 
 # Root
-R="--root=${1}"
+R="--root=${1} -y"
+
+
+#
+#
+# Beware module order
+#
+#
+
 
 # Clear all caches
+drush $R cc all 
 
-drush $R cc all -y
 
-# beware module orders
+
 
 # Disable
-drush $R pm-disable -y navbar
-drush $R pm-disable -y breakpoints
-
+drush $R pm-disable navbar
+drush $R pm-disable breakpoints
 
 
 # Uninstall
-drush $R pm-uninstall -y navbar
+drush $R pm-uninstall navbar
+
+
+# Install
+drush $R dl admin_menu
+drush $R en admin_menu
+
+drush $R dl advagg
+drush $R en admin_menu
+ 

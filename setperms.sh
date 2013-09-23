@@ -67,9 +67,10 @@ echo "done";
 
 echo -n "3. updating permissions recursively of 'tmp' directories...";
 
+chmod 777 $2/sites/default/files
+
 find $2/sites/default/files -type d -exec chmod u=rwx,g=rwx,o=rwx '{}' \;
 find $2/sites/default/files -type f -exec chmod u=rw,g=rw,o=rw '{}' \;
-
 
 echo "done";
 
