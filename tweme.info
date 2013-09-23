@@ -8,8 +8,8 @@ settings[bootstrap_source] = bootstrapcdn
 settings[bootstrap_version] = 2.3.2
 settings[primary_tasks_style] = tabs
 settings[secondary_tasks_style] = pills
-settings[max_width_940] = 1
-settings[affixed_sidebars] = 1
+settings[max_width_940] = 0
+settings[affixed_sidebars] = 0
 
 stylesheets[all][] = assets/css/bootstrap-extra.css
 stylesheets[all][] = assets/css/drupal.css
