@@ -360,7 +360,12 @@ div.pane-block>h2
   text-rendering: optimizelegibility;
   text-transform:capitalize;
 }
-
+i.icon-en{
+  background-position: 0;
+  background-repeat: no-repeat;
+  padding-left: 5px;
+  background-image: url('/sites/all/modules/languageicons/flags/en.png') !important;
+}
 
 #navbar .input-append input, 
 #navbar .input-append select, 
