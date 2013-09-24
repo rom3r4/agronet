@@ -1,7 +1,23 @@
+/** header search box **/
+#navbar #edit-keys {
+  width: 225px;
+  height: 16px;
+  margin-top: 4px;
+}
+#navbar button.btn.btn-inverse {
+  height: 27px;
+  margin-top: 3px;
+}
 /** css redefinition **/
 #content div.form-item, 
 #content div.form-actions {
   margin-top: 0.5em;
+}
+/** remove names from follow boxes **/
+
+div.view-commons-follow-user-followers div.views-field-name ,
+div.view-commons-follow-user-following div.views-field-name {
+  display:none;
 }
 #content .form-actions {
   margin-top: 0;
@@ -57,7 +73,7 @@ div.panel-pane div.node-resource-agrisap, div.panel-pane div.node-resource-dc{
   float:left;
 }
 .search-result-snippet div.profile h3 {
-  display:none;	
+  display:none;
 }
 
 #content div.pane-views,
@@ -502,7 +518,8 @@ div#comments div.comment a>img{
 #edit-comment-body-und-0-format,
 #edit-og-group-ref,
 .full-form {
-  display:none;
+  
+  /*FIXME display:none; */ 
 }
 /**** hidden elemments ****/
 
