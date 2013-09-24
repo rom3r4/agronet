@@ -4,6 +4,10 @@
  * Custom theme implementation to display a single Drupal page.
  */
 ?>
+
+<?php
+/** used throught panels. the code below covers admin & user/* sections **/
+/*
 <!-- Navbar -->
 <div id="navbar" class="navbar navbar-medium navbar-inverse navbar-static-top">
 	<div class="navbar-inner">
@@ -19,6 +23,67 @@
 		</div>
 	</div>
 </div>
+*/
+?>
+<?php if (strpos(drupal_get_path_alias($_GET["q"]), "admin") === 0): /** we are on admin section **/ ?>
+<a id="jump-up" class="element-invisible"></a>    
+<div id="navbar" class="navbar navbar-medium navbar-inverse navbar-static-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>			<a class="brand" href="/"><img src="/sites/all/themes/tweme/assets/images/voa3r/logo-voa3r.png"> </a>      
+			<nav class="nav-collapse collapse" role="navigation">
+
+				<ul class="nav" role="menu" aria-labelledby="drop3">
+					<li>
+						<div class="input-append  not-visible">
+							<form class="search-form navbar-search navbar-search-elastic  pull-right" action="/search/site" method="post" id="search-form2" accept-charset="UTF-8" target="_self"><input placeholder="Search for Resouces &amp; People" type="text" id="edit-keys" name="keys" class="form-text required" value="" required=""><button type="submit" class="btn btn-inverse"><i class="icon-search icon-white"></i></button></form></div>
+						</li>
+						<li><a href="/" class="active-trail active" role="menuitem">Home</a></li>
+						<!--<li ><a href="/search/site" title="Advanced search" role="menuitem"> Advanced Search <i class="icon-chevron-down"></i></a></li>-->
+
+					</ul>  
+				</nav>
+			</div>
+		</div>
+	</div>
+<?php else: /** we are in user  section **/ ?>
+   <a id="jump-up" class="element-invisible"></a>    
+   <div id="navbar" class="navbar navbar-medium navbar-inverse navbar-static-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>			<a class="brand" href="/"><img src="/sites/all/themes/tweme/assets/images/voa3r/logo-voa3r.png"> </a>      
+			<nav class="nav-collapse collapse" role="navigation">
+
+				<ul class="nav" role="menu" aria-labelledby="drop3">
+					<li>
+						<div class="input-append">
+							<form class="search-form navbar-search navbar-search-elastic  pull-right" action="/search/site" method="post" id="search-form2" accept-charset="UTF-8" target="_self"><input placeholder="Search for Resouces &amp; People" type="text" id="edit-keys" name="keys" class="form-text required" value="" required=""><button type="submit" class="btn btn-inverse"><i class="icon-search icon-white"></i></button></form></div>
+						</li>
+						<li ><a href="/" class="active-trail active" role="menuitem">Home</a></li>
+						<li class="active"><a href="/user" class="active-trail active" role="menuitem">Profile</a></li>
+						<li><a href="/search/site" title="Advanced search" role="menuitem"> Advanced Search <i class="icon-chevron-down"></i></a></li>
+					</ul>  
+					<ul class="nav pull-right">
+						<li id="fat-menu" class="dropdown">
+							<a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">
+								%user:name
+								<b class="caret"></b>
+							</a>
+
+							<ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="/user"><i class="icon-bookmark"></i>  Profile </a></li>						<li role="presentation"><a role="menuitem" tabindex="-1" href="/events"><i class="icon-calendar"></i> Events </a></li>
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="/people"><i class="icon-globe"></i> People directory </a></li>
+								<li role="presentation" class="divider"></li>
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="/user/logout"><i class=" icon-off"></i> Log out </a></li>
+							</ul>
+						</li>
+					</ul>	
+				</nav>
+			</div>
+		</div>
+	</div>    
+<?php endif ?>
+<?php /* str_replace(base_path(), '', drupal_get_path_alias(request_uri(), 1));*/ ?>
 
 <?php if ($page['featured']): ?>
 <!-- Featured -->

@@ -15,6 +15,29 @@ function tweme_preprocess_html(&$vars) {
 }
 
 /**
+ * Preprocess the value of the user name, to use it in the header
+ * @author: julian  
+ */
+function tweme_username(&$vars) {
+  global $user;
+  $fullname = "";
+
+  if ($user && $user->id && $user->id>=0) {
+
+    /** authenticated user. get firstname and lastname **/
+    $user_fields = user_load($user->uid);
+    $firstname = $user_fields->field_firstname['und']['0']['value'];
+    $lastname = $user_fields->field_lastname['und']['0']['value'];
+    if (!strncmp($firstname, "") && !strncmp($lastname, "")) {
+      $fullname = $user->name;
+    } else {
+      $fullname = $firstname . $lastname;
+    }
+  }
+  $vars["fullname"] = $fullname;
+}
+
+/**
  * Processes variables for html.tpl.php.
  */
 function tweme_process_html(&$vars) {

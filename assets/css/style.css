@@ -30,6 +30,16 @@ div.view-commons-follow-user-following div.views-field-name {
   padding:0;
   
 }
+/** btn-mini **/
+#edit-actioncommons-trusted-contacts-set-state-active-action,
+#edit-actioncommons-trusted-contacts-set-state-blocked-action,
+#edit-actionog-membership-delete-action {
+  padding: 0 6px;
+  font-size: 10.5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
 /** search result snippets **/
 .search-result-wrapper {
   padding: 0.5em 0.5em 0 0.5em;
@@ -284,7 +294,8 @@ border-color: #0044cc #0044cc #002a80;
 border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
 filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
-
+#edit-actioncommons-trusted-contacts-set-state-blocked-action:hover,
+#edit-actionog-membership-delete-action:hover,
 input#edit-cancel:hover,
 input#edit-cancel--2:hover,
 .flag-abuse-user a:hover{
@@ -292,6 +303,8 @@ input#edit-cancel--2:hover,
   color: #ffffff;
   background-color: #bd362f;
 }
+#edit-actioncommons-trusted-contacts-set-state-blocked-action,
+#edit-actionog-membership-delete-action,
 input#edit-cancel,
 input#edit-cancel--2,
 .flag-abuse-user a{

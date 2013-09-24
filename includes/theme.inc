@@ -16,6 +16,7 @@ function tweme_process_preface(&$vars) {
  * Returns HTML for the navbar brand.
  */
 function tweme_navbar_brand($vars) {
+
   $out = '<a class="brand" href="' . $vars['href'] . '">';
   if ($vars['logo']) {
     $out .= '<img src="' . $vars['logo'] . '" /> ';
@@ -24,6 +25,7 @@ function tweme_navbar_brand($vars) {
   $out .= '</a>';
   return $out;
 }
+
 
 /**
  * Returns HTML for the navbar toggler.
