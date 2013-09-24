@@ -47,6 +47,17 @@
 		</div>
 	</div>
 <?php else: /** we are in user  section **/ ?>
+<?php
+
+global $user; 
+if ($user->uid) {
+
+
+   $userData = user_load($user->uid);
+   $realname = $userData->realname;
+
+?>
+
    <a id="jump-up" class="element-invisible"></a>    
    <div id="navbar" class="navbar navbar-medium navbar-inverse navbar-static-top">
 	<div class="navbar-inner">
@@ -66,7 +77,7 @@
 					<ul class="nav pull-right">
 						<li id="fat-menu" class="dropdown">
 							<a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">
-								%user:name
+								<?php echo $realname; ?>
 								<b class="caret"></b>
 							</a>
 
@@ -82,8 +93,45 @@
 			</div>
 		</div>
 	</div>    
+<?php 
+} else { 
+?>
+<div id="navbar" class="navbar navbar-medium navbar-inverse navbar-static-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>			<a class="brand" href="/"><img src="/sites/all/themes/tweme/assets/images/voa3r/logo-voa3r.png"> </a>      
+			<nav class="nav-collapse collapse" role="navigation">
+
+				<ul class="nav" role="menu" aria-labelledby="drop3">
+					<li>
+						<div class="input-append  not-visible">
+							<form class="search-form navbar-search navbar-search-elastic  pull-right" action="/search/site" method="post" id="search-form2" accept-charset="UTF-8" target="_self"><input placeholder="Search for Resouces &amp; People" type="text" id="edit-keys" name="keys" class="form-text required" value="" required=""><button type="submit" class="btn btn-inverse"><i class="icon-search icon-white"></i></button></form></div>
+						</li>
+						<li class="active"><a href="/" class="active-trail active" role="menuitem">Home</a></li>
+						<li><a href="/search/site" title="Advanced search" role="menuitem"> Advanced Search <i class="icon-chevron-down"></i></a></li>
+
+					</ul>  
+					<ul class="nav pull-right">
+						<li id="fat-menu" class="dropdown">
+							<a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">
+								Language
+								<b class="caret"></b>
+							</a>
+
+							<ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
+								<li role="presentation"><a role="menuitem" tabindex="-1" href="#"><i class="icon-en"></i>  English </a></li>
+
+							</ul>
+						</li>
+					</ul>	
+				</nav>
+			</div>
+		</div>
+	</div>
+<?php
+}
+?>
 <?php endif ?>
-<?php /* str_replace(base_path(), '', drupal_get_path_alias(request_uri(), 1));*/ ?>
 
 <?php if ($page['featured']): ?>
 <!-- Featured -->
