@@ -164,6 +164,45 @@ ul li.leaf {
 /** shorten submit boxes**/
   margin-bottom: 0;
 }
+/** acordion collapsible **/
+fieldset.collapsible {
+  margin-bottom: 2px;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin: 0.5em 0;
+}
+/** responsiveness fix **/
+html.js fieldset.collapsed .fieldset-wrapper{
+  display:none;
+}
+
+fieldset.collapsible>legend {
+  -webkit-border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  border-radius: 4px 4px 0 0;
+  margin:0 -1px -1px -1px;
+  border-bottom:0;
+  border: 1px solid #e5e5e5;
+}
+fieldset.collapsible.collapsed>legend {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+fieldset.collapsible .fieldset-wrapper{
+  display: block;
+  padding: 9px 15px;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #E5E5E5;
+}
+
+/** acordion collapsed **/
+
+
 div.node.node-teaser h2{
   font-size: 19px;
   font-weight: bold;
@@ -179,6 +218,7 @@ div.node.node-teaser h2{
 .rate-description {
   clear: left;
 }
+#edit-revalidate--2 .fieldset-wrapper>a,
 .node-readmore a,
 .comment-add a,
 .flag-wrapper a,
@@ -186,6 +226,7 @@ div.node.node-teaser h2{
 .flag-wrapper.flag-commons-follow-node a,
 .flag-wrapper flag-commons-follow-group a {
 /** bootstrap buttonize **/
+/** .btn **/
 display: inline-block;
 padding: 4px 12px;
 margin-bottom: 0;
@@ -278,6 +319,7 @@ background-color: #999;
   color: white !important;
 
 }
+#edit-revalidate--2 .fieldset-wrapper>a,
 .node-readmore a {
 /** btn-primary **/
 color: #ffffff;
