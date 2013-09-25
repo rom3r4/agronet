@@ -121,6 +121,24 @@ ul.links.inline {
   color: #005580;
   outline: 0;
 }
+/** 'bootstrapize' tables **/
+tr td.active {
+  background-color: transparent;
+}
+
+table.views-table {
+  background-color: #fff !important;
+}
+table.views-table tr {
+  border-bottom: 0;
+  border-top: 1px solid #ccc;
+}
+table.views-table tr.odd {
+  background-color: #f5f5f5 !important;
+}
+table.views-table tr.even {
+  background-color: #fff !important;
+}
 /** word 'new' in new comments in red **/
 .comment.comment-new span.new {
   color:white !important;
