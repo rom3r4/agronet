@@ -200,7 +200,7 @@ if ($user->uid) {
     <?php print "&nbsp;&nbsp;" . $copyright ?>
      <a href="/about" title="About us">About us</a> | <a href="/project" class="">The Project</a> | <a href="/contact" class="">Contact</a> | <a href="/legal" class="">Legal Information</a>
       <p>
-          The research within the project VOA3R leading to these results has received funding from the ICT Policy Support Programme (ICT PSP), Theme 4 - Open access to scientific information, grant agreement n 250525 - All rights reserved
+          &nbsp;&nbsp;The research within the project AgroNet leading to these results has received funding from the ICT Policy Support Programme (ICT PSP), Theme 4 - Open access to scientific information, grant agreement n 250525 - All rights reserved
       </p>
 	</div>
 </footer>
