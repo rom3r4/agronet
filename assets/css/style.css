@@ -130,6 +130,9 @@ form.search-form #edit-submit {
 }
 
 /** 'bootstrapize' tables **/
+table>thead>tr>th {
+  border-bottom:0;
+}
 tr td.active {
   background-color: transparent;
 }
