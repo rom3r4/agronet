@@ -4,9 +4,9 @@ core = 7.x
 configure=admin/structure/quicktabs/styles
 dependencies[] = "quicktabs"
 
-; Information added by drush on 2013-09-23
+; Information added by drush on 2013-09-26
 version = "7.x-3.4+3-dev"
 core = "7.x"
 project = "quicktabs"
-datestamp = "1379893131"
+datestamp = "1380175725"
 

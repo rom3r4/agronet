@@ -2,19 +2,18 @@ name = Commons Featured Content
 description = Allows community managers to display certain pieces of content more prominently on the site.
 core = 7.x
 package = Commons - Building blocks
-php = 5.2.4
 project = commons_featured
 dependencies[] = views
 dependencies[] = views_content
 datestamp = 1354747305
 features[ctools][] = views:views_default:3.0
-features[features_api][] = api:1
+features[features_api][] = api:2
 features[views_view][] = commons_featured
 
 
-; Information added by drush on 2013-09-23
-version = "7.x-3.3+1521-dev"
+; Information added by drush on 2013-09-26
+version = "7.x-3.3+1531-dev"
 core = "7.x"
 project = "commons"
-datestamp = "1379893126"
+datestamp = "1380175675"
 

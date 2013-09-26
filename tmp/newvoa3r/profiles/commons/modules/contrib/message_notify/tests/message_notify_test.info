@@ -7,9 +7,9 @@ hidden = TRUE
 files[] = plugins/notifier/MessageNotifierTest.class.php
 
 
-; Information added by drush on 2013-09-23
+; Information added by drush on 2013-09-26
 version = "7.x-2.5+0-dev"
 core = "7.x"
 project = "message_notify"
-datestamp = "1379893133"
+datestamp = "1380175729"
 

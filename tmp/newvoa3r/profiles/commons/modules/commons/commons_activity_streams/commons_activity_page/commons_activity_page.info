@@ -3,19 +3,20 @@ description = Allows users to view a stream of site-wide and personalized activi
 core = 7.x
 package = Commons - Landing pages
 project = commons_activity_page
+dependencies[] = commons_activity_streams
+dependencies[] = commons_featured
 dependencies[] = ctools
+dependencies[] = page_manager
 dependencies[] = panels
 dependencies[] = panels_ipe
-dependencies[] = page_manager
-dependencies[] = commons_featured
-dependencies[] = commons_activity_streams
 features[ctools][] = page_manager:pages_default:1
-features[features_api][] = api:1
+features[features_api][] = api:2
 features[page_manager_pages][] = commons_activity_streams_activity
 
-; Information added by drush on 2013-09-23
-version = "7.x-3.3+1521-dev"
+
+; Information added by drush on 2013-09-26
+version = "7.x-3.3+1531-dev"
 core = "7.x"
 project = "commons"
-datestamp = "1379893126"
+datestamp = "1380175675"
 

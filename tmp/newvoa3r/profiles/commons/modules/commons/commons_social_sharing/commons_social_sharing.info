@@ -7,7 +7,7 @@ dependencies[] = ctools
 dependencies[] = sharethis
 dependencies[] = strongarm
 features[ctools][] = strongarm:strongarm:1
-features[features_api][] = api:1
+features[features_api][] = api:2
 features[variable][] = sharethis_button_option
 features[variable][] = sharethis_comments
 features[variable][] = sharethis_late_load
@@ -19,9 +19,9 @@ features[variable][] = sharethis_weight
 features[variable][] = sharethis_widget_option
 
 
-; Information added by drush on 2013-09-23
-version = "7.x-3.3+1521-dev"
+; Information added by drush on 2013-09-26
+version = "7.x-3.3+1531-dev"
 core = "7.x"
 project = "commons"
-datestamp = "1379893126"
+datestamp = "1380175675"
 

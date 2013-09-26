@@ -33,7 +33,7 @@ echo "done."
 
 echo -n "Installing contrib modules, themes & libraries in ${FINAL_DIR}/sites/all/modules..."
 rm -rf ${FINAL_DIR}/sites/all/modules
-git https://github.com/julianromerajuarez/drupal-voa3rmodules.git ${FINAL_DIR}/sites/all/modules
+git clone https://github.com/julianromerajuarez/drupal-voa3rmodules.git ${FINAL_DIR}/sites/all/modules
 
 rm -rf ${FINAL_DIR}/sites/all/themes
 mkdir ${FINAL_DIR}/sites/all/themes
