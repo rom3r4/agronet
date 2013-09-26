@@ -13,7 +13,7 @@ echo "this process may take some minutes :/ .. please be patient :-)"
 
 echo -n "Creating commons profile..."
 rm -rf ${PROFILE_DIR}
-git clone --branch 7.x-3.x git@github.com:julianromerajuarez/drupal-voa3rprofile.git ${PROFILE_DIR}
+git clone --branch 7.x-3.x https://github.com/julianromerajuarez/drupal-voa3rprofile.git ${PROFILE_DIR}
 echo "done."
 
 echo -n "Deploying newVOA3R..."
@@ -31,13 +31,18 @@ echo "include_once('sites/default/settings.inc');" >>  ${FINAL_DIR}/sites/defaul
 mkdir ${FINAL_DIR}/logs
 echo "done."
 
-echo -n "Installing contrib modules & themes in ${FINAL_DIR}/sites/all/modules..."
+echo -n "Installing contrib modules, themes & libraries in ${FINAL_DIR}/sites/all/modules..."
 rm -rf ${FINAL_DIR}/sites/all/modules
-git clone git@github.com:julianromerajuarez/drupal-voa3rmodules.git ${FINAL_DIR}/sites/all/modules
+git https://github.com/julianromerajuarez/drupal-voa3rmodules.git ${FINAL_DIR}/sites/all/modules
 
 rm -rf ${FINAL_DIR}/sites/all/themes
 mkdir ${FINAL_DIR}/sites/all/themes
 git clone https://github.com/julianromerajuarez/drupal-voa3rtweme.git  ${FINAL_DIR}/sites/all/themes/tweme
+
+rm -rf ${FINAL_DIR}/sites/all/libraries
+mkdir ${FINAL_DIR}/sites/all/libraries
+git clone https://github.com/julianromerajuarez/drupal-voa3rlibraries.git ${FINAL_DIR}/sites/all/libraries
+
 echo "done."
 
 echo -n "setting permmissions..."
