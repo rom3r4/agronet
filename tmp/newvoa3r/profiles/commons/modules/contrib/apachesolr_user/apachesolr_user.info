@@ -10,5 +10,5 @@ core = 7.x
 version = "7.x-1.x-dev"
 core = "7.x"
 project = "apachesolr_user"
-datestamp = "1380175861"
+datestamp = "1380175993"
 

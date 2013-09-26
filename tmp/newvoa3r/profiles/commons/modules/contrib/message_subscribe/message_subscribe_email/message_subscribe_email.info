@@ -15,5 +15,5 @@ files[] = message_subscribe_email.test
 version = "7.x-1.0-alpha5+7-dev"
 core = "7.x"
 project = "message_subscribe"
-datestamp = "1380175857"
+datestamp = "1380175988"
 

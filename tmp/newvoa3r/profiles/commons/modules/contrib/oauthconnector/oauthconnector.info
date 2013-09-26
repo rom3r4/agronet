@@ -14,5 +14,5 @@ dependencies[] = ctools
 version = "7.x-1.0-beta1+6-dev"
 core = "7.x"
 project = "oauthconnector"
-datestamp = "1380175856"
+datestamp = "1380175988"
 

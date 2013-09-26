@@ -31,5 +31,5 @@ files[] = includes/i18nviews_plugin_localization_i18nstrings.inc
 version = "7.x-3.x-dev"
 core = "7.x"
 project = "i18nviews"
-datestamp = "1380175859"
+datestamp = "1380175990"
 

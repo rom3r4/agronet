@@ -378,5 +378,5 @@
 version = "7.x-3.1+68-dev"
 core = "7.x"
 project = "adaptivetheme"
-datestamp = "1380175853"
+datestamp = "1380175984"
 

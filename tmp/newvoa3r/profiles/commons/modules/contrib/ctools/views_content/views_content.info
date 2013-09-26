@@ -14,5 +14,5 @@ files[] = plugins/views/views_content_plugin_style_ctools_context.inc
 version = "7.x-1.3+4-dev"
 core = "7.x"
 project = "ctools"
-datestamp = "1380175861"
+datestamp = "1380175992"
 

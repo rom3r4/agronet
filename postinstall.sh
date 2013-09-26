@@ -39,11 +39,11 @@ drush $R cc all
 # Disable
 drush $R pm-disable navbar
 drush $R pm-disable breakpoints
-
+drush $R pm-disable paranoia
 
 # Uninstall
 drush $R pm-uninstall navbar
-
+drush $R pm-uninstall paranoia 
 
 # Install
 drush $R dl admin_menu
