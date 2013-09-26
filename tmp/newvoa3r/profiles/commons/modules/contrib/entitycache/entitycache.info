@@ -14,5 +14,5 @@ files[] = entitycache.test
 version = "7.x-1.1+6-dev"
 core = "7.x"
 project = "entitycache"
-datestamp = "1380175732"
+datestamp = "1380175860"
 

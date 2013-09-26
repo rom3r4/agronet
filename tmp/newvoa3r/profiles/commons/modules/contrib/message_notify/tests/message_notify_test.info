@@ -11,5 +11,5 @@ files[] = plugins/notifier/MessageNotifierTest.class.php
 version = "7.x-2.5+0-dev"
 core = "7.x"
 project = "message_notify"
-datestamp = "1380175729"
+datestamp = "1380175858"
 

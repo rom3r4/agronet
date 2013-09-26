@@ -13,5 +13,5 @@ dependencies[] = "ctools"
 version = "7.x-3.4+3-dev"
 core = "7.x"
 project = "quicktabs"
-datestamp = "1380175725"
+datestamp = "1380175855"
 

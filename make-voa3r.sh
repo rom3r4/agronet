@@ -24,14 +24,14 @@ echo "done."
 echo "...created directory: ${FINAL_DIR}"
 echo ""
 
-echo -n "Post-installing..."
+echo "Post-installing..."
 cp --force ./settings.inc ${FINAL_DIR}/sites/default/
 echo "include_once('sites/default/settings.inc');" >>  ${FINAL_DIR}/sites/default/default.settings.php
 echo "include_once('sites/default/settings.inc');" >>  ${FINAL_DIR}/sites/default/settings.php
 mkdir ${FINAL_DIR}/logs
 echo "done."
 
-echo -n "Installing contrib modules, themes & libraries in ${FINAL_DIR}/sites/all/modules..."
+echo "Installing contrib modules, themes & libraries in ${FINAL_DIR}/sites/all/modules..."
 rm -rf ${FINAL_DIR}/sites/all/modules
 git clone https://github.com/julianromerajuarez/drupal-voa3rmodules.git ${FINAL_DIR}/sites/all/modules
 
@@ -45,7 +45,7 @@ git clone https://github.com/julianromerajuarez/drupal-voa3rlibraries.git ${FINA
 
 echo "done."
 
-echo -n "setting permmissions..."
+echo "setting permmissions..."
 
 ./setperms.sh -x ${FINAL_DIR}
 

@@ -28,5 +28,5 @@ files[] = tests/entityreference.feeds.test
 version = "7.x-1.0+5-dev"
 core = "7.x"
 project = "entityreference"
-datestamp = "1380175732"
+datestamp = "1380175860"
 

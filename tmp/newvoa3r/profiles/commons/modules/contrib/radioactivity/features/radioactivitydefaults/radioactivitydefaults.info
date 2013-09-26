@@ -16,5 +16,5 @@ features[radioactivity_decay_profile][] = default_weekly
 version = "7.x-2.8+1-dev"
 core = "7.x"
 project = "radioactivity"
-datestamp = "1380175725"
+datestamp = "1380175855"
 
