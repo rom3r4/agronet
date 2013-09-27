@@ -1,3 +1,11 @@
+/** brand image fix **/
+.navbar .brand img {
+  height: 30px;
+}
+/** text center **/
+.t-center{
+  text-align:center;
+}
 /** header search box **/
 #navbar #edit-keys {
   width: 225px;
@@ -13,6 +21,12 @@
 #content div.form-actions {
   margin-top: 0.5em;
 }
+/** do not display hidden captcha **/
+div.captcha {
+  visibility: hidden;
+  margin-top: -70px;
+}
+
 /** remove names from follow boxes **/
 
 div.view-commons-follow-user-followers div.views-field-name ,
@@ -150,6 +164,7 @@ table.sticky-table tr.even {
   background-color: #fff !important;
 }
 /** word 'new' in new comments in red **/
+span.marker,
 .comment.comment-new span.new {
   color:white !important;
   background-color: #B94A48;
@@ -605,7 +620,18 @@ div#comments div.comment a>img{
   /*FIXME display:none; */ 
 }
 /**** hidden elemments ****/
-
+.padtop1{
+  padding-top:1em;
+}
+.padtop05{
+  padding-top:0.5em;
+}
+.padtop15{
+  padding-top:1.5em;
+}
+.marbot0{
+  margin-bottom:0;
+}
 .martop1{
   margin-top:1em;
 }
@@ -772,3 +798,7 @@ div#overlay {
     line-height: 0;
 }
 
+/** quickfixes. Until we get designs from AgroKnow **/
+i.icon-chevron-down {
+  display:none;
+}

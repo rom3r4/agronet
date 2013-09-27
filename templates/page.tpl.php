@@ -30,7 +30,7 @@
 <div id="navbar" class="navbar navbar-medium navbar-inverse navbar-static-top">
 	<div class="navbar-inner">
 		<div class="container">
-			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>			<a class="brand" href="/"><img src="/sites/all/themes/tweme/assets/images/voa3r/logo-voa3r.png"> </a>      
+			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>			<a class="brand" href="/"><img src="/sites/all/themes/tweme/assets/images/logo.gif"> </a>      
 			<nav class="nav-collapse collapse" role="navigation">
 
 				<ul class="nav" role="menu" aria-labelledby="drop3">
@@ -62,7 +62,7 @@ if ($user->uid) {
    <div id="navbar" class="navbar navbar-medium navbar-inverse navbar-static-top">
 	<div class="navbar-inner">
 		<div class="container">
-			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>			<a class="brand" href="/"><img src="/sites/all/themes/tweme/assets/images/voa3r/logo-voa3r.png"> </a>      
+			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>			<a class="brand" href="/"><img src="/sites/all/themes/tweme/assets/images/logo.gif"> </a>      
 			<nav class="nav-collapse collapse" role="navigation">
 
 				<ul class="nav" role="menu" aria-labelledby="drop3">
@@ -99,7 +99,7 @@ if ($user->uid) {
 <div id="navbar" class="navbar navbar-medium navbar-inverse navbar-static-top">
 	<div class="navbar-inner">
 		<div class="container">
-			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>			<a class="brand" href="/"><img src="/sites/all/themes/tweme/assets/images/voa3r/logo-voa3r.png"> </a>      
+			<button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>			<a class="brand" href="/"><img src="/sites/all/themes/tweme/assets/images/logo.gif"> </a>      
 			<nav class="nav-collapse collapse" role="navigation">
 
 				<ul class="nav" role="menu" aria-labelledby="drop3">
@@ -198,7 +198,7 @@ if ($user->uid) {
     <a href="http://europa.eu"><img src="http://voa3r.eu/images/flag_eu.gif" border="0" style="border: 0; float: left;"></a>
     <a href="http://ec.europa.eu/research/fp7/"><img src="http://voa3r.eu/images/fp7.gif" border="0" style="border: 0; float: left;"></a>
     <?php print "&nbsp;&nbsp;" . $copyright ?>
-     <a href="/about" title="About us">About us</a> | <a href="/project" class="">The Project</a> | <a href="/contact" class="">Contact</a> | <a href="/legal" class="">Legal Information</a>
+     <a href="/about" title="About us">About us</a><!-- | <a href="/project" class="">The Project</a>--> | <a href="/contact" class="">Contact</a> | <a href="/legal" class="">Legal Information</a>
       <p>
           &nbsp;&nbsp;The research within the project AgroNet leading to these results has received funding from the ICT Policy Support Programme (ICT PSP), Theme 4 - Open access to scientific information, grant agreement n 250525 - All rights reserved
       </p>
