@@ -1,3 +1,9 @@
+/** people listing section **/
+.commons-search-solr-user-results div.profile>h3{
+  font-size:14px;
+  line-height: 14px;
+  border:0 !important;
+}
 /** admin menu redefinition **/
 div#admin-menu {
   background: #777;
