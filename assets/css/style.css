@@ -1,3 +1,23 @@
+/** admin menu redefinition **/
+div#admin-menu {
+  background: #777;
+  border-bottom: 1px solid #999;
+}
+div#admin-menu .dropdown a, 
+div#admin-menu .dropdown li > span {
+  border-right: 1px solid #666 !important;
+}
+div#admin-menu li.admin-menu-account > a {
+  background: #B94A48 !important;
+}
+div#admin-menu .dropdown .admin-menu-action a {
+  border-left: 0 !important;
+}
+div#admin-menu .dropdown a:hover, 
+div#admin-menu .dropdown li > span:hover {
+  background:#fff;
+  color:#666 !important;
+}
 /** brand image fix **/
 .navbar .brand img {
   height: 30px;
