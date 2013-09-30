@@ -41,7 +41,8 @@ div#admin-menu .dropdown li > span:hover {
   text-align:center;
 }
 /** header search box **/
-#navbar #edit-keys {
+#navbar #edit-keys,
+#navbar #edit-keys2{
   width: 225px;
   height: 16px;
   margin-top: 4px;

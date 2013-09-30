@@ -36,7 +36,13 @@
 				<ul class="nav" role="menu" aria-labelledby="drop3">
 					<li>
 						<div class="input-append  not-visible">
-							<form class="search-form navbar-search navbar-search-elastic  pull-right" action="/search/site" method="post" id="search-form2" accept-charset="UTF-8" target="_self"><input placeholder="Search for Resouces &amp; People" type="text" id="edit-keys" name="keys" class="form-text required" value="" required=""><button type="submit" class="btn btn-inverse"><i class="icon-search icon-white"></i></button></form></div>
+							<form class="search-form navbar-search navbar-search-elastic  pull-right" action="/search/site" method="post" id="search-form2" accept-charset="UTF-8" target="_self"><input placeholder="Search for Resouces &amp; People" type="text" id="edit-keys2" name="keys" class="form-text required" required=""><button type="submit" class="btn btn-inverse"><i class="icon-search icon-white"></i></button>
+<input type="hidden" name="get" value="[]">
+<input type="hidden" name="form_build_id" value="form-wvoYbkEZzJNvxJIWweAbVWXSucEPusHI1CaG--ecMY8">
+<input type="hidden" name="form_id" value="apachesolr_search_custom_page_search_form">
+							
+							
+							</form></div>
 						</li>
 						<li><a href="/" class="active-trail active" role="menuitem">Home</a></li>
 						<!--<li ><a href="/search/site" title="Advanced search" role="menuitem"> Advanced Search <i class="icon-chevron-down"></i></a></li>-->
@@ -68,7 +74,13 @@ if ($user->uid) {
 				<ul class="nav" role="menu" aria-labelledby="drop3">
 					<li>
 						<div class="input-append">
-							<form class="search-form navbar-search navbar-search-elastic  pull-right" action="/search/site" method="post" id="search-form2" accept-charset="UTF-8" target="_self"><input placeholder="Search for Resouces &amp; People" type="text" id="edit-keys" name="keys" class="form-text required" value="" required=""><button type="submit" class="btn btn-inverse"><i class="icon-search icon-white"></i></button></form></div>
+							<form class="search-form navbar-search navbar-search-elastic  pull-right" action="/search/site" method="post" id="search-form2" accept-charset="UTF-8" target="_self"><input placeholder="Search for Resouces &amp; People" type="text" id="edit-keys2" name="keys" class="form-text required" required=""><button type="submit" class="btn btn-inverse"><i class="icon-search icon-white"></i></button>
+<!--
+<input type="hidden" name="get" value="[]">
+<input type="hidden" name="form_token" value="<php echo drupal_get_token();>">
+<input type="hidden" name="form_build_id" value="form-<php echo md5(uniqid(mt_rand(), TRUE)); >">
+<input type="hidden" name="form_id" value="apachesolr_search_custom_page_search_form">
+--></form></div>
 						</li>
 						<li ><a href="/" class="active-trail active" role="menuitem">Home</a></li>
 						<li class="active"><a href="/user" class="active-trail active" role="menuitem">Profile</a></li>
@@ -105,7 +117,14 @@ if ($user->uid) {
 				<ul class="nav" role="menu" aria-labelledby="drop3">
 					<li>
 						<div class="input-append  not-visible">
-							<form class="search-form navbar-search navbar-search-elastic  pull-right" action="/search/site" method="post" id="search-form2" accept-charset="UTF-8" target="_self"><input placeholder="Search for Resouces &amp; People" type="text" id="edit-keys" name="keys" class="form-text required" value="" required=""><button type="submit" class="btn btn-inverse"><i class="icon-search icon-white"></i></button></form></div>
+							<form class="search-form navbar-search navbar-search-elastic  pull-right" action="/search/site" method="post" id="search-form2" accept-charset="UTF-8" target="_self"><input placeholder="Search for Resouces &amp; People" type="text" id="edit-keys2" name="keys" class="form-text required" required=""><button type="submit" class="btn btn-inverse"><i class="icon-search icon-white"></i></button>
+
+<input type="hidden" name="get" value="[]">
+<input type="hidden" name="form_build_id" value="form-wvoYbkEZzJNvxJIWweAbVWXSucEPusHI1CaG--ecMY8">
+<input type="hidden" name="form_id" value="apachesolr_search_custom_page_search_form">
+
+
+</form></div>
 						</li>
 						<li class="active"><a href="/" class="active-trail active" role="menuitem">Home</a></li>
 						<li><a href="/search/site" title="Advanced search" role="menuitem"> Advanced Search <i class="icon-chevron-down"></i></a></li>
