@@ -8,6 +8,11 @@ Site Demo
 
 A current live snapshot can be seen on http://agronet.appgee.net (Open-Alpha version)
 
+Installation
+--
+
+    Updating documentation..
+
 Technologies
 --
 - Drupal 7
@@ -22,10 +27,6 @@ Technologies
 - Permormance / Mass-load tests
 
 
-Installation
---
-
-Updating documentation..
 
 
 License
