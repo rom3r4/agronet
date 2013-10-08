@@ -28,7 +28,7 @@ Installation
 Updating documentation..
 
 
-Licesnse
+License
 --
 
 Copyright University of Alcala. Licensed under GNU/ GPL version 2 License  
