@@ -1,4 +1,4 @@
-[drupal-voa3rinstaller|#]
+[drupal-voa3rinstaller]
 --
 
 New-Voa3r (AgroNet) Intaller script
@@ -8,9 +8,8 @@ Site Demo
 
 A current live snapshot can be seen on http://agronet.appgee.net (Open-Alpha version)
 
-Techs
+Technologies
 --
-
 - Drupal 7
 - NGINX + FastCGI + MySQL
 - MongoDB
@@ -18,8 +17,7 @@ Techs
 - PHP APC
 - Varnish
 - CDNs
-- Bootstrap 2.3
-
+- Bootstrap 2
 - Usability tests
 - Permormance / Mass-load tests
 
@@ -27,10 +25,10 @@ Techs
 Installation
 --
 
-Updating doc
+Updating documentation..
 
 
 Licesnse
 --
 
-Copyright  University of Alcala. Licensed under GNU/ GPL version 2 License  
+Copyright University of Alcala. Licensed under GNU/ GPL version 2 License  
