@@ -1,7 +1,7 @@
 /** badges **/ 
 .user_badges img.badge{
-  width: 60px;
-  height: 75px;
+  width: 45px;
+  height: 60px;
   display: inline-block;
   background-color: rgba(0, 0, 0, 0);
 }
