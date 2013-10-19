@@ -11,7 +11,8 @@ A current live snapshot can be seen on http://agronet.appgee.net (Open-Alpha ver
 Requirements
 --
 
-- Drush
+- Drush  
+
 - memcached (optative)
 - PHP APC (optative)
 - Varnish (optative)
@@ -58,19 +59,18 @@ Installation
    
 
 
-Technologies
+Technologies used
 --
 
 - Drupal 7
 - Drupal Commons 3
-- NGINX + PHP FastCGI + MySQL
+- NGINX + PHP FastCGI + MySQL +  MongoDB
 - Apache Solr
-- MongoDB
 - Memcached
 - PHP APC
 - Varnish
 - CDNs
-- Modified Bootstrap 2 Theme (Tweme) 
+- Twitter Bootstrap 2 
 - tested for Usability
 - tested for Scalability
 
@@ -78,6 +78,7 @@ Technologies
 Troubleshoting
 --
 
+https://github.com/julianromerajuarez/drupal-voa3rinstaller/wiki/Troubleshooting
 
 License
 --
