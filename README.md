@@ -72,6 +72,7 @@ Technologies used
 - Varnish
 - CDNs
 - Twitter Bootstrap 2 
+- Honeypot Captcha (For Usability Reasons)
 - tested for Usability
 - tested for Scalability
 
