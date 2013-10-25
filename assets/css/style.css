@@ -852,3 +852,44 @@ div.pane-content .front-box {
 .front #edit-basic div.input-append {
   width:80%;
 }
+
+/** front page bullet **/
+
+.rhbutton {
+  /*background: #779FBB;*/
+  background:#78b5b8;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  height: 100%;
+  margin: 0;
+  width: 100%;
+}
+a {
+  color: #58A;
+}
+.rhbutton:hover {
+  /*background: #557286;*/
+  background:#5B8E91;
+}
+.rhbutton img {
+  border-width: 0; 
+  display: block;
+  height: 56%;
+  padding: 22% 28% 22% 36%;
+  width: 36%;
+}
+.rhbutton {
+  cursor: pointer;
+}
+.rh-nessie-button {
+  display: inline-block;
+  height: 34px;
+  overflow: hidden;
+  padding: 0;
+  width: 34px;
+}
+.rh-nessie-buttonc {
+  text-align: center;
+}
