@@ -218,8 +218,8 @@ if ($user->uid) {
     <a href="http://ec.europa.eu/research/fp7/"><img src="http://voa3r.eu/images/fp7.gif" border="0" style="border: 0; float: left;"></a>
     <?php print "&nbsp;&nbsp;" . $copyright ?>
      <a href="/about" title="About us">About us</a><!-- | <a href="/project" class="">The Project</a>--> | <a href="/contact" class="">Contact</a> | <a href="/legal" class="">Legal Information</a>
-      <p>
-          &nbsp;&nbsp;The research within the project AgroNet leading to these results has received funding from the ICT Policy Support Programme (ICT PSP), Theme 4 - Open access to scientific information, grant agreement n 250525 - All rights reserved
-      </p>
+      <div class="span10 marlef01">
+          The research within the project AgroNet leading to these results has received funding from the ICT Policy Support Programme (ICT PSP), Theme 4 - Open access to scientific information, grant agreement n 250525 - All rights reserved
+      </div>
 	</div>
 </footer>

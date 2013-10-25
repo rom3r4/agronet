@@ -6,6 +6,7 @@
   background-color: rgba(0, 0, 0, 0);
 }
 
+
 /** people listing section **/
 .commons-search-solr-user-results div.profile>h3{
   font-size:14px;
@@ -32,6 +33,7 @@ div#admin-menu .dropdown li > span:hover {
   background:#fff;
   color:#666 !important;
 }
+
 /** brand image fix **/
 .navbar .brand img {
   height: 30px;
@@ -682,6 +684,9 @@ div#comments div.comment a>img{
 .marlef1{
   margin-left:1em;
 }
+.marlef01 {
+  margin-left: 10px;
+}
 .marrig1{
   margin-right:1em;
 }
@@ -836,4 +841,14 @@ div#overlay {
 /** quickfixes. Until we get designs from AgroKnow **/
 i.icon-chevron-down {
   display:none;
+}
+/** USABILITY FIXES **/
+div.pane-content .front-box {
+  min-height: 270px;
+}
+.front #search-form2 {
+  margin-top:0;
+}
+.front #edit-basic div.input-append {
+  width:80%;
 }
