@@ -84,7 +84,7 @@ if ($user->uid) {
 						</li>
 						<li ><a href="/" class="active-trail active" role="menuitem">Home</a></li>
 						<li class="active"><a href="/user" class="active-trail active" role="menuitem">Profile</a></li>
-						<li><a href="/search/site" title="Advanced search" role="menuitem"> Advanced Search <i class="icon-chevron-down"></i></a></li>
+						<!--<li><a href="/search/site" title="Advanced search" role="menuitem"> Advanced Search <i class="icon-chevron-down"></i></a></li>-->
 					</ul>  
 					<ul class="nav pull-right">
 						<li id="fat-menu" class="dropdown">
@@ -127,7 +127,7 @@ if ($user->uid) {
 </form></div>
 						</li>
 						<li class="active"><a href="/" class="active-trail active" role="menuitem">Home</a></li>
-						<li><a href="/search/site" title="Advanced search" role="menuitem"> Advanced Search <i class="icon-chevron-down"></i></a></li>
+						<!--<li><a href="/search/site" title="Advanced search" role="menuitem"> Advanced Search <i class="icon-chevron-down"></i></a></li>-->
 
 					</ul>  
 					<ul class="nav pull-right">
@@ -217,7 +217,7 @@ if ($user->uid) {
     <a href="http://europa.eu"><img src="http://voa3r.eu/images/flag_eu.gif" border="0" style="border: 0; float: left;"></a>
     <a href="http://ec.europa.eu/research/fp7/"><img src="http://voa3r.eu/images/fp7.gif" border="0" style="border: 0; float: left;"></a>
     <?php print "&nbsp;&nbsp;" . $copyright ?>
-     <a href="/about" title="About us">About us</a><!-- | <a href="/project" class="">The Project</a>--> | <a href="/contact" class="">Contact</a> | <a href="/legal" class="">Legal Information</a>
+     <a href="/about" title="About us">About us</a><!-- | <a href="/project" class="">The Project</a>--> | <a href="/contact" class="">Contact</a> | <a href="/legal" class="colorbox-load">Legal Information</a>
       <div class="span10 marlef01">
           The research within the project AgroNet leading to these results has received funding from the ICT Policy Support Programme (ICT PSP), Theme 4 - Open access to scientific information, grant agreement n 250525 - All rights reserved
       </div>

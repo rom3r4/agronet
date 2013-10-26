@@ -590,7 +590,8 @@ div.panel-pane div.node-resource-dc {
 /** home page search snippets **/
 #quicktabs-container-commons_bw div.views-row-even div.node-teaser {
   /*background-color: #e6e6e6;*/
-  background-color: rgba(182, 215, 168, 0.47);
+  /*background-color: rgba(182, 215, 168, 0.47);*/
+  background-color: rgba(120, 181, 184, 0.25);
   border-bottom-color: #CCC;
   border: 1px solid #FFF;
   
@@ -658,41 +659,44 @@ div#comments div.comment a>img{
 }
 /**** hidden elemments ****/
 .padtop1{
-  padding-top:1em;
+  padding-top:1em !important;
 }
 .padtop05{
-  padding-top:0.5em;
+  padding-top:0.5em !important;
 }
 .padtop15{
-  padding-top:1.5em;
+  padding-top:1.5em !important;
 }
 .marbot0{
-  margin-bottom:0;
+  margin-bottom:0 !important;
 }
 .martop1{
-  margin-top:1em;
+  margin-top:1em !important;
 }
 .martop05{
-  margin-top:0.5em;
+  margin-top:0.5em !important;
 }
 .martop15{
-  margin-top:1.5em;
+  margin-top:1.5em !important;
 }
 .marbot1{
-  margin-botton:1em;
+  margin-bottom:1em !important;
+}
+.marbot05{
+  margin-bottom:05em !important;
 }
 .marlef1{
-  margin-left:1em;
+  margin-left:1em !important;
 }
 .marlef01 {
-  margin-left: 10px;
+  margin-left: 10px !important;
 }
 .marrig1{
-  margin-right:1em;
+  margin-right:1em !important;
 }
 .carousel-inner>.item>img, .carousel-inner>.item>a>img {
-height: 230px;
-margin: 0 auto;
+  height: 230px;
+  margin: 0 auto;
 }
 .panelizer-view-mode.node.node-teaser > h2 {
     font-size: 21px;
@@ -849,9 +853,12 @@ div.pane-content .front-box {
 .front #search-form2 {
   margin-top:0;
 }
+.front-box form input[type="text"],
+.front-box form input[type="password"],
 .front #edit-basic div.input-append {
   width:80%;
 }
+
 
 /** front page bullet **/
 
@@ -891,5 +898,12 @@ a {
   width: 34px;
 }
 .rh-nessie-buttonc {
+  padding: 0;
   text-align: center;
+  vertical-align: middle;
+  width: 34px;
+  display: inline-block;
+}
+.t-center{
+  text-align:center;
 }
