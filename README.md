@@ -52,7 +52,7 @@ Verify Requirements
     Loaded Configuration File:         /etc/php5/cli/php.ini
     Scan for additional .ini files in: /etc/php5/cli/conf.d
     Additional .ini files parsed:      /etc/php5/cli/conf.d/10-pdo.ini,
-    /etc/php5/cli/conf.d/20-apc.ini,    <------------------------------------------------
+    /etc/php5/cli/conf.d/20-apc.ini,    <--------------
     /etc/php5/cli/conf.d/20-curl.ini,
     /etc/php5/cli/conf.d/20-gd.ini,
     /etc/php5/cli/conf.d/20-memcache.ini,
@@ -70,7 +70,7 @@ Verify Requirements
     $ sudo netstat -lnp | grep mongo
     tcp        0      0 0.0.0.0:28017           0.0.0.0:*               LISTEN      3546/mongod
     tcp        0      0 0.0.0.0:27017           0.0.0.0:*               LISTEN      3546/mongod
-    unix  2      [ ACC ]     STREAM     LISTENING     10975    3546/mongod         /tmp/mongodb-27017.sock
+    unix  2      [ ACC ]     STREAM     LISTENING     10975    3546/mongod         /tmp/mongodb-
     
 
 Requirements Installation
@@ -110,7 +110,7 @@ Requirements Installation
     $ sudo apt-get install mongodb-server
     
     
-Test/Restart Requitements 
+Test/Restart Requirements 
 --
 
     Memcached
@@ -134,32 +134,59 @@ Test/Restart Requitements
 Installation
 --
     
-    ( Prepare your database )
+    Create your database:
     $ sudo mysqladmin -uroot -p create __YOUR_DATABASE__
      
     
-    ( Suppose you plan to install VOA3R at /www/newvoa3r)
+    ( Suppose you plan to install VOA3R at /www/agronet)
     $ mkdir /www (if it doesn't exist )
-    $ cd /www
+    
+    Change directoyry to /tmp
+    $ cd /tmp
     $ git clone https://github.com/julianromerajuarez/drupal-voa3rinstaller.git ./newvoa3r
+    ...
+    
     $ cd ./newvoa3r
     $ ./make-voa3r.sh 
+    ...
     
-    ( Point your browser to http://loacalhost/newvoa3r/install.php y selecct Commons Profile ( you may 
-         be asked for your MySQL database credentials: your database name is 'newvoa3r' 
-         -- you can change this in first step --)
+    $ pwd
+    /tmp/newvoa3r
+    
+    Copy generated installation to /www/agronet
+    $ mv ./tmp/newvoa3r/ ./tmp/agronet
+    
+    $ cp -R ./tmp/agronet /www
+    
+    Copy scripts to destination directory
+    
+    $ cd /tmp/newvoa3r
+    $ copy *.sh /www/agronet
+    $ copy *.ini /www/agronet
+    
+    
+    
+    ( Point your browser to http://loacalhost/agronet/install.php --or your url alias--
+         and selecct Commons Profile ( you may be asked for your MySQL database 
+         credentials: your database name is 'newvoa3r' -- you can change this in first step
 
-    ( Once you finish previous steps )
-    $ wget newvoa3r.appgee.net/LASTEST_DATABASE.sql.tar.gz (request file first)
+    
+    Resquest file, LATEST_DATABASE.sql.tar.gz (not provided here)
     $ tar -xzvf ./LATEST_DATABASE.sql.tar.gz
     
-    ( This command will automatically load LATEST_DATABASE database into your Drupal setup )
-    $ ./conf-voa3r.sh /www/newvoa3r ./LATEST_DATABASE.sql 
+    $ ls LATEST_DATABASE.sql
+    LATEST_DATABASE.sql
+    
+    
+    ( The below  command will automatically load LATEST_DATABASE database into your Drupal setup )
+    $ ./conf-voa3r.sh /www/agronet ./LATEST_DATABASE.sql 
+    ...
 
     ( Last, check that /www/newvoa3r/sites/default/settings.php contains the same database credentials 
-      that you created )
+      that you created: database name, user and password )
+    ...
 
-    HEADS UP: This settup comes with MongoDB, memcache, varnish and APC modules enabled by default,
+    --> This settup comes with MongoDB, memcache, varnish and APC modules enabled by default,
     if you are experimenting issues, try disabling them first. To do so, try:
     
     ( From your drupal directory )
@@ -171,15 +198,25 @@ Installation
     If you have those Services (Mamceched, varnish, etc.) installed on your Server, you can try tweaking file
     /www/newvoa3r/sites/default/include.php to increase you Drupal Setup performance 
     
+
+Activating Optional Services:
+
+   To activate Memcached, APC & varnish in your Drupal installation
+   ( you will get a performance increase)
    
+   change directory  to:
+   $ cd /www/agronet/sites/default
+   
+   $ vi settings.inc 
+   ( remove comments )
+      
 
-
-Technologies used
+Projects used
 --
 
 - Drupal 7
 - Drupal Commons 3
-- NGINX + PHP FastCGI + MySQL +  MongoDB
+- NGINX / Apache + PHP FastCGI + MySQL +  MongoDB
 - Apache Solr
 - Memcached
 - PHP APC
