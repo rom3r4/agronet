@@ -6,7 +6,7 @@ New-Voa3r (AgroNet) Intaller script
 Site Demo
 --
 
-A current live snapshot can be seen on http://agronet.appgee.net (Open-Alpha version)
+A current live snapshot can be seen on http://agronet2.appgee.net (Open-Alpha version)
 
 Requirements
 --
