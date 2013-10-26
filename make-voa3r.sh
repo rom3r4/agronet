@@ -21,8 +21,10 @@ rm -rf ${FINAL_DIR}
 drush make ${PROFILE_DIR}/build-commons.make --prepare-install ${FINAL_DIR}
 echo "done."
 
-echo "...created directory: ${FINAL_DIR}"
-echo ""
+if [ ! -d $FINAL_FIR ];then
+  echo "...created directory: ${FINAL_DIR}"
+  echo ""
+fi
 
 echo "Post-installing..."
 cp --force ./settings.inc ${FINAL_DIR}/sites/default/
@@ -50,13 +52,4 @@ echo "setting permmissions..."
 ./setperms.sh -x ${FINAL_DIR}
 
 echo "done."
-
-echo "Further steps:"
-
-echo ""
-echo "# (1.) If needed, to create a new database use: 'mysqladmin -uDATABASE_ROOT_USER -p craate NEW_DATABASE'"
-echo "# (2.) Copy ${FINAL_DIR} to your server /www/...."
-echo "# (3.) Point your browser to http://__X__/install.php to continue proccess" 
-echo "# (4.) After installation, run ./conf-voa3r.sh and import newVOA3R database"
-
 

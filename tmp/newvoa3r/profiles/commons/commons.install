@@ -1,0 +1,223 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the Commons install profile.
+ */
+
+/**
+ * Implements hook_requirements().
+ * Set minimum 'max_execution_time' requirement
+ */
+function commons_requirements($phase) {
+  $requirements = array();
+  // Ensure translations don't break during installation.
+  $t = get_t();
+  if($phase == 'install') {
+    // Test PHP minimum execution time
+    $requirements['php_max_execution_time'] = array(
+      'title' => $t('PHP Max Execution Time'),
+      'value' => ini_get('max_execution_time'),
+    );
+    $max_execution_time = (int)ini_get('max_execution_time');
+    // Don't set the error when max_execution_time is 0 (Infinite).
+    if ($max_execution_time && $max_execution_time < DRUPAL_MINIMUM_MAX_EXECUTION_TIME) {
+      $requirements['php_max_execution_time']['description'] = $t('Your PHP execution time is too low, please set it greater than or equal to %time seconds.', array('%time' => DRUPAL_MINIMUM_MAX_EXECUTION_TIME));
+      $requirements['php_max_execution_time']['severity'] = REQUIREMENT_ERROR;
+    }
+  }
+  return $requirements;
+}
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function commons_install() {
+  // Enable the Origins theme and set it as the default.
+  theme_enable(array('adaptivetheme', 'commons_origins', 'adaptivetheme_admin'));
+
+    // The Bartik theme is automatically enabled during installation. Disable it.
+  db_update('system')
+    ->fields(array('status' => 0))
+    ->condition('type', 'theme')
+    ->condition('name', 'bartik')
+    ->execute();
+
+  // Set the default and administration themes.
+  variable_set('theme_default', 'commons_origins');
+  // Set a default administrative theme:
+  variable_set('admin_theme', 'adaptivetheme_admin');
+  variable_set('node_admin_theme', FALSE);
+
+  // Do not use the administration theme when editing or creating content.
+  variable_set('node_admin_theme', '0');
+
+  // Set a default user avatar.
+  commons_set_default_avatar();
+
+  // Place site blocks in the menu_bar and header regions.
+  $menu_block = array(
+    'module' => 'system',
+    'delta' => 'main-menu',
+    'theme' => 'commons_origins',
+    'visibility' => 0,
+    'region' => 'menu_bar',
+    'status' => 1,
+    'pages' => '',
+    'title' => '<none>',
+  );
+  drupal_write_record('block', $menu_block);
+
+  $search_block = array(
+    'module' => 'search',
+    'delta' => 'form',
+    'theme' => 'commons_origins',
+    'visibility' => 0,
+    'region' => 'header',
+    'status' => 1,
+    'pages' => '',
+    'weight' => 2,
+    'title' => '<none>',
+  );
+  drupal_write_record('block', $search_block);
+
+  // Create a default role for site administrators, with all available permissions assigned.
+  $admin_role = new stdClass();
+  $admin_role->name = 'administrator';
+  $admin_role->weight = 2;
+  user_role_save($admin_role);
+  // Set this as the administrator role.
+  variable_set('user_admin_role', $admin_role->rid);
+
+  // Assign user 1 the "administrator" role.
+  db_insert('users_roles')
+    ->fields(array('uid' => 1, 'rid' => $admin_role->rid))
+    ->execute();
+
+  // AdaptiveTheme requires that the system theme settings form
+  // be submitted in order for its themes' settings to be properly set
+  // and the resulting css files generated.
+  // For more background, see http://drupal.org/node/1776730.
+  module_load_include('inc', 'system', 'system.admin');
+  foreach (array('adaptivetheme', 'commons_origins') as $theme_name) {
+    $form_state = form_state_defaults();
+    $form_state['build_info']['args'][0] = $theme_name;
+    $form_state['values'] = array();
+    drupal_form_submit('system_theme_settings', $form_state);
+  }
+}
+
+/**
+ * Enable the Origins theme and set it as the default. *
+ */
+function commons_update_3101() {
+  theme_enable(array('adaptivetheme_admin'));
+  variable_set('theme_default', 'commons_origins');
+  variable_set('node_admin_theme', FALSE);
+  return array();
+}
+
+/**
+ * Reset the default avatar if the associated file doesn't exist in the file_managed table.
+ */
+function commons_update_3102() {
+  $reset_avatar = FALSE;
+  $file = variable_get('user_picture_default', '');
+  if(!$file) {
+    $reset_avatar = TRUE;
+  }
+  if(!$reset_avatar) {
+    $results = db_select('file_managed', 'f')
+      ->fields('f', array('fid'))
+      ->condition('filename', $file,'=')
+      ->execute()
+      ->fetchAll();
+    if(count($results) === 0) {
+      $reset_avatar = TRUE;
+    }
+  }
+  if($reset_avatar) {
+    commons_set_default_avatar();
+  }
+  return array();
+}
+
+/**
+ * Replace the Toolbar module with the Navbar module.
+ */
+function commons_update_3103() {
+  // Enable the Navbar module and its dependencies.
+  $module_list = array('breakpoints', 'navbar');
+  module_enable($module_list);
+
+  // Migrate permissions.
+  if (module_exists('toolbar')) {
+    $roles = user_roles(FALSE, 'access toolbar');
+    if (!empty($roles)) {
+      // Set permissions.
+      foreach ($roles as $rid => $role) {
+        user_role_grant_permissions($rid, array('access navbar'));
+      }
+    }
+  }
+
+  // Disable the Toolbar module.
+  $module_list = array('toolbar');
+  module_disable($module_list);
+
+  return array();
+}
+
+/**
+ * Enable the Paranoia module.
+ */
+function commons_update_3104() {
+  $module_list = array('paranoia');
+  module_enable($module_list);
+  return array();
+}
+
+/**
+ * Enable the Placeholder module.
+ */
+function commons_update_3105() {
+  $module_list = array('placeholder');
+  module_enable($module_list);
+  return array();
+}
+
+/**
+ * Enable the Addressfield and Addressfield tokens module.
+ */
+function commons_update_3106() {
+  $module_list = array('addressfield', 'addressfield_tokens');
+  module_enable($module_list);
+  return array();
+}
+
+/**
+ * Rebuild the registry to accommodate Commons modules merging into the profile.
+ */
+function commons_update_3107() {
+  registry_rebuild();
+}
+
+/**
+ * Make the OG relationship required so that browsing widget
+ * tabs on the site homepage show an accurate count of content in each tab.
+ */
+function commons_update_3108() {
+    $revert = array(
+    'commons_posts' => array('views_view'),
+    'commons_documents' => array('views_view'),
+    'commons_polls' => array('views_view'),
+    'commons_wikis' => array('views_view'),
+    'commons_q_a' => array('views_view')
+  );
+  features_revert($revert);
+  return array();
+}

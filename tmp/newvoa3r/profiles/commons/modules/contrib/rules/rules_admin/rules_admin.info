@@ -1,0 +1,15 @@
+name = Rules UI
+description = Administrative interface for managing rules.
+package = Rules
+core = 7.x
+files[] = rules_admin.module
+files[] = rules_admin.inc
+dependencies[] = rules
+
+
+; Information added by drush on 2013-10-26
+version = "7.x-2.5+2-dev"
+core = "7.x"
+project = "rules"
+datestamp = "1382821210"
+

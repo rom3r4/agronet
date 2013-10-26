@@ -1,0 +1,23 @@
+name = Commons User Profile Pages
+description = Exports a default user profile page, powered by the Panels module.
+core = 7.x
+package = Commons - Landing pages
+project = commons_user_profile_pages
+dependencies[] = commons_activity_streams
+dependencies[] = commons_events
+dependencies[] = commons_follow
+dependencies[] = commons_profile_base
+dependencies[] = commons_profile_social
+dependencies[] = ctools
+dependencies[] = page_manager
+features[ctools][] = page_manager:pages_default:1
+features[features_api][] = api:2
+features[page_manager_handlers][] = user_view_panel_context
+
+
+; Information added by drush on 2013-10-26
+version = "7.x-3.4+6-dev"
+core = "7.x"
+project = "commons"
+datestamp = "1382821205"
+
