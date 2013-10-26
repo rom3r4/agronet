@@ -1,0 +1,19 @@
+name = Message subscribe email
+core = 7.x
+php = 5.2.4
+version = 7.x-1.0
+project = message_subscribe_email
+dependencies[] = flag
+dependencies[] = list
+dependencies[] = message_subscribe_ui
+dependencies[] = views
+
+files[] = message_subscribe_email.test
+
+
+; Information added by drush on 2013-09-23
+version = "7.x-1.0-alpha5+7-dev"
+core = "7.x"
+project = "message_subscribe"
+datestamp = "1379893133"
+

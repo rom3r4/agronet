@@ -1,0 +1,15 @@
+name = "Commons Follow UI"
+description = "User interface for the Commons Follow functionality"
+core = 7.x
+package = Commons - Building blocks
+dependencies[] = commons_follow
+dependencies[] = message_subscribe_ui
+dependencies[] = quicktabs
+
+
+; Information added by drush on 2013-09-26
+version = "7.x-3.3+1531-dev"
+core = "7.x"
+project = "commons"
+datestamp = "1380175981"
+
