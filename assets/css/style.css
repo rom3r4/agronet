@@ -846,6 +846,10 @@ div#overlay {
 i.icon-chevron-down {
   display:none;
 }
+/** fix for tweme progress bar issue **/
+.bar {
+  height: 20px !important;
+}
 /** USABILITY FIXES **/
 div.pane-content .front-box {
   min-height: 270px;
