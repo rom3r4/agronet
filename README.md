@@ -11,17 +11,130 @@ A current live snapshot can be seen on http://agronet.appgee.net (Open-Alpha ver
 Requirements
 --
 
-- Drush  
+- Drush
+- Drush make  
 - memcached (optative)
 - PHP APC (optative)
 - Varnish (optative)
 - mongoDB (optative) 
 
+Verify Requirements
+--
+
+    Drush 
+    
+    $ sudo drush --version
+    drush version 5.9
+    
+    Drush make
+    
+    $ sudo drush | grep make
+    Other commands: (make)
+    make                  Turns a makefile into a working Drupal codebase.
+    make-generate         Generate a makefile from the current Drupal site.
+      
+    Memchached (Optative)
+    
+    $ sudo netstat -lnp | grep memcache
+    tcp        0      0 127.0.0.1:11211         0.0.0.0:*               LISTEN      28355/memcached
+    udp        0      0 127.0.0.1:11211         0.0.0.0:*                           28355/memcached
+    
+    Varnish (Optative)
+    
+    $ sudo netstat -lnp | grep varnish
+    tcp        0      0 127.0.0.1:1440          0.0.0.0:*               LISTEN      28679/varnishd
+    tcp        0      0 127.0.0.1:1441          0.0.0.0:*               LISTEN      28678/varnishd
+    
+    APC (Optative)
+    
+    $ sudo php --ini
+    Configuration File (php.ini) Path: /etc/php5/cli
+    Loaded Configuration File:         /etc/php5/cli/php.ini
+    Scan for additional .ini files in: /etc/php5/cli/conf.d
+    Additional .ini files parsed:      /etc/php5/cli/conf.d/10-pdo.ini,
+    /etc/php5/cli/conf.d/20-apc.ini,    <------------------------------------------------
+    /etc/php5/cli/conf.d/20-curl.ini,
+    /etc/php5/cli/conf.d/20-gd.ini,
+    /etc/php5/cli/conf.d/20-memcache.ini,
+    /etc/php5/cli/conf.d/20-memcached.ini,
+    /etc/php5/cli/conf.d/20-mysql.ini,
+    /etc/php5/cli/conf.d/20-mysqli.ini,
+    /etc/php5/cli/conf.d/20-pdo_mysql.ini,
+    /etc/php5/cli/conf.d/20-xdebug.ini,
+    /etc/php5/cli/conf.d/@20-mongo.ini,
+    /etc/php5/cli/conf.d/imagick.ini
+    
+    
+    MongoDB (Optative)
+    
+    $ sudo netstat -lnp | grep mongo
+    tcp        0      0 0.0.0.0:28017           0.0.0.0:*               LISTEN      3546/mongod
+    tcp        0      0 0.0.0.0:27017           0.0.0.0:*               LISTEN      3546/mongod
+    unix  2      [ ACC ]     STREAM     LISTENING     10975    3546/mongod         /tmp/mongodb-27017.sock
+    
+
+Requirements Installation
+--
+    (Ubuntu / Debian Linux)
+    
+    First step
+    
+    $ sudo apt-get update
+    
+    Drush and Drush make
+    
+    $ sudo apt-cache search drush
+    drush - command line shell and Unix scripting interface for Drupal
+    drush-make - Drupal source code deployment tool
+    
+    $ sudo apt-get install drush drush-make
+    
+    Memcached (Optative)
+    
+    $ sudo apt-get install memcached 
+    ...
+    ... ? [y/N] y
+    
+    Varnish (Optative)
+    
+    $ sudo apt-get install varnish
+    ...
+    ...? [y/N] y
+    
+    APC (Optative)
+    
+    $ sudo apt-get install php-apc
+    
+    MongoDB
+    
+    $ sudo apt-get install mongodb-server
+    
+    
+Test/Restart Requitements 
+    
+    Memcached
+    
+    $ sudo service memcached restart
+    
+    Varnish
+    
+    $ sudo service varnish restart
+    
+    APC
+    
+    $ sudo service apache2 restart
+    or
+    $ sudo service nginx restart
+    
+    MongoDB
+    
+    $ sudo service mongodb restart
+
 Installation
 --
     
     ( Prepare your database )
-    $ sudo mysqladmin -uroot -p create newvoa3r
+    $ sudo mysqladmin -uroot -p create __YOUR_DATABASE__
      
     
     ( Suppose you plan to install VOA3R at /www/newvoa3r)
@@ -72,9 +185,9 @@ Technologies used
 - Varnish
 - CDNs
 - Twitter Bootstrap 2 
-- Honeypot Captcha (For Usability Reasons)
-- tested for Usability
-- tested for Scalability
+- Honeypot Captcha 
+- Tested for Usability
+- Tested for Scalability
 
 To-Do List
 --
