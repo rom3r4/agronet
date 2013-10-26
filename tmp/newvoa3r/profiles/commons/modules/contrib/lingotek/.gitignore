@@ -1,5 +1,0 @@
-# Ignore hidden files
-.*
-!.gitignore
-config.php
-temp
