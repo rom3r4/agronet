@@ -161,8 +161,13 @@ div.pane-page-content form.comment-form
 }
 
 ul.links.inline {
-  margin-bottom:15px !important;
+  margin-bottom:0 !important;
+  margin-top:0 !important;
 }
+ul.links.inline li{
+  margin-right:0.5em !important;
+}
+
 /** default unordered lists in blocks: selected item **/
 .panel-pane.pane-block .pane-content .item-list li>a:hover,
 .panel-pane.pane-block .pane-content .item-list li>a:active
@@ -863,6 +868,11 @@ div.pane-content .front-box {
   width:80%;
 }
 
+.front-box form input[type="submit"]{
+  width:90%;
+  margin-left: -15px !important;
+}
+
 
 /** front page bullet **/
 
@@ -910,4 +920,24 @@ a {
 }
 .t-center{
   text-align:center;
+}
+/** "-- esto esta sosudo" **/
+div.navbar-inverse div.navbar-inner {
+  background-color: #78B5B8;
+  background-image: -moz-linear-gradient(top, #78B5B8, #78B5B8);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#78B5B8), to(#78B5B8));
+  background-image: -webkit-linear-gradient(top, #78B5B8, #78B5B8);
+  background-image: -o-linear-gradient(top, #222222, #111111);
+  background-image: linear-gradient(to bottom, #78B5B8, #78B5B8);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#78B5B8', endColorstr='#78B5B8', GradientType=0);
+  border-color: #78B5B8;
+}
+.navbar-inverse .brand, .navbar-inverse .nav>li>a {
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+.navbar-inverse .nav li.dropdown>.dropdown-toggle .caret {
+  border-top-color: #fff;
+  border-bottom-color: #fff;
 }
