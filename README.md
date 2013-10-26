@@ -13,10 +13,10 @@ Requirements
 
 - Drush
 - Drush make  
-- memcached (optative)
-- PHP APC (optative)
-- Varnish (optative)
-- mongoDB (optative) 
+- memcached (Optional)
+- APC (Optional)
+- Varnish (Optional)
+- mongoDB (Optional) 
 
 Verify Requirements
 --
@@ -33,19 +33,19 @@ Verify Requirements
     make                  Turns a makefile into a working Drupal codebase.
     make-generate         Generate a makefile from the current Drupal site.
       
-    Memchached (Optative)
+    Memchached (Optional)
     
     $ sudo netstat -lnp | grep memcache
     tcp        0      0 127.0.0.1:11211         0.0.0.0:*               LISTEN      28355/memcached
     udp        0      0 127.0.0.1:11211         0.0.0.0:*                           28355/memcached
     
-    Varnish (Optative)
+    Varnish (Optional)
     
     $ sudo netstat -lnp | grep varnish
     tcp        0      0 127.0.0.1:1440          0.0.0.0:*               LISTEN      28679/varnishd
     tcp        0      0 127.0.0.1:1441          0.0.0.0:*               LISTEN      28678/varnishd
     
-    APC (Optative)
+    APC (Optional)
     
     $ sudo php --ini
     Configuration File (php.ini) Path: /etc/php5/cli
@@ -65,7 +65,7 @@ Verify Requirements
     /etc/php5/cli/conf.d/imagick.ini
     
     
-    MongoDB (Optative)
+    MongoDB (Optional)
     
     $ sudo netstat -lnp | grep mongo
     tcp        0      0 0.0.0.0:28017           0.0.0.0:*               LISTEN      3546/mongod
@@ -89,19 +89,19 @@ Requirements Installation
     
     $ sudo apt-get install drush drush-make
     
-    Memcached (Optative)
+    Memcached (Optional)
     
     $ sudo apt-get install memcached 
     ...
     ... ? [y/N] y
     
-    Varnish (Optative)
+    Varnish (Optional)
     
     $ sudo apt-get install varnish
     ...
     ...? [y/N] y
     
-    APC (Optative)
+    APC (Optional)
     
     $ sudo apt-get install php-apc
     
@@ -168,7 +168,7 @@ Installation
     
     ( Point your browser to http://loacalhost/agronet/install.php --or your url alias--
          and selecct Commons Profile ( you may be asked for your MySQL database 
-         credentials: your database name is 'newvoa3r' -- you can change this in first step
+         credentials: your database name is __YOUR_DATABASE__  -- you can change this in first step
 
     
     Resquest file, LATEST_DATABASE.sql.tar.gz (not provided here)
@@ -186,6 +186,12 @@ Installation
       that you created: database name, user and password )
     ...
 
+    $ ./postinstall /www/agronet
+    
+    ( remove installation scripts )
+    $ rm *.sh
+    $ rm *.ini 
+
     --> This settup comes with MongoDB, memcache, varnish and APC modules enabled by default,
     if you are experimenting issues, try disabling them first. To do so, try:
     
@@ -200,30 +206,32 @@ Installation
     
 
 Activating Optional Services:
+--
 
-   To activate Memcached, APC & varnish in your Drupal installation
+   To activate Memcached & varnish in your Drupal installation
    ( you will get a performance increase)
    
-   change directory  to:
+   Change directory  to:
    $ cd /www/agronet/sites/default
    
    $ vi settings.inc 
-   ( remove comments )
+   --> remove the comments at the beggining and at the end 
       
 
-Projects used
+Other projects used
 --
 
 - Drupal 7
 - Drupal Commons 3
-- NGINX / Apache + PHP FastCGI + MySQL +  MongoDB
+- NGINX / Apache2 + PHP FastCGI + MySQL +  MongoDB
 - Apache Solr
 - Memcached
-- PHP APC
+- APC
 - Varnish
 - CDNs
-- Twitter Bootstrap 2 
+- Bootstrap 2 
 - Honeypot Captcha 
+
 - Tested for Usability
 - Tested for Scalability
 
