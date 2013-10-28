@@ -6,7 +6,7 @@ Automated Drupal-Commons Profile Installer
 Demo
 --
 
-A current live snapshot can be seen on http://agronet2.appgee.net (Open-Alpha version)
+A current live snapshot can be seen on [Demo](http://agronet2.appgee.net) (Open-Alpha version)
 
 Requirements
 --
@@ -260,12 +260,12 @@ Other projects used
 To-Do List
 --
 
-(ToDo Wiki|https://github.com/julianromerajuarez/drupal-voa3rinstaller/wiki/TODO)
+[TODO Wiki](https://github.com/julianromerajuarez/drupal-voa3rinstaller/wiki/TODO)
 
 Troubleshooting
 --
 
-(TroubleShooting Wiki|https://github.com/julianromerajuarez/drupal-voa3rinstaller/wiki/Troubleshooting)
+[TroubleShooting Wiki](https://github.com/julianromerajuarez/drupal-voa3rinstaller/wiki/Troubleshooting)
 
 License
 --
