@@ -18,7 +18,7 @@ Requirements
 - Varnish (Optional)
 - mongoDB (Optional) 
 
-Verify Requirements
+Verifying Requirements are installed
 --
 
     Drush 
@@ -33,6 +33,10 @@ Verify Requirements
     make                  Turns a makefile into a working Drupal codebase.
     make-generate         Generate a makefile from the current Drupal site.
       
+    
+    ( Stop here if your are not using any Optional Requirement )  
+    
+    
     Memchached (Optional)
     
     $ sudo netstat -lnp | grep memcache
@@ -73,7 +77,7 @@ Verify Requirements
     unix  2      [ ACC ]     STREAM     LISTENING     10975    3546/mongod         /tmp/mongodb-
     
 
-Requirements Installation
+Installing Requirements (also Optional Reqs)
 --
     (Ubuntu / Debian Linux)
     
@@ -143,20 +147,17 @@ Installation
     
     Change directoyry to /tmp
     $ cd /tmp
-    $ git clone https://github.com/julianromerajuarez/drupal-voa3rinstaller.git ./newvoa3r
+    $ git clone https://github.com/julianromerajuarez/drupal-voa3rinstaller.git ./__CHOOSE_NAME__
     ...
     
-    $ cd ./newvoa3r
+    $ cd ./__CHOOSE_NAME__
     $ ./make-voa3r.sh 
     ...
     
-    $ pwd
-    /tmp/newvoa3r
-    
     Copy generated installation to /www/agronet
-    $ mv ./tmp/newvoa3r/ ./tmp/agronet
+    $ cp -R ./tmp/__CHOOSE_NAME__ ./tmp/agronet
     
-    $ cp -R ./tmp/agronet /www
+    $ mv ./tmp/agronet /www
     
     Copy scripts to destination directory
     
@@ -171,31 +172,32 @@ Installation
          credentials: your database name is __YOUR_DATABASE__  -- you can change this in first step
 
     
-    Resquest file, LATEST_DATABASE.sql.tar.gz (not provided here)
-    $ tar -xzvf ./LATEST_DATABASE.sql.tar.gz
+    Resquest file, __LATEST_DATABASE__.sql.tar.gz (not provided here)
+    $ tar -xzvf ./__LATEST_DATABASE__.sql.tar.gz
     
     $ ls LATEST_DATABASE.sql
     LATEST_DATABASE.sql
     
     
-    ( The below  command will automatically load LATEST_DATABASE database into your Drupal setup )
+    ( The ommand bellow will load __LATEST_DATABASE__ database into your site )
     $ ./conf-voa3r.sh /www/agronet ./LATEST_DATABASE.sql 
     ...
 
-    ( Last, check that /www/newvoa3r/sites/default/settings.php contains the same database credentials 
+    ( Check that /www/newvoa3r/sites/default/settings.php contains the same database credentials 
       that you created: database name, user and password )
     ...
 
-    $ ./postinstall /www/agronet
+    $ ./postinstall __YOUR_SITE_DIRECTORY__
     
     ( remove installation scripts )
+    $ cd __YOUR_SITE_DIRECTORY__
     $ rm *.sh
     $ rm *.ini 
 
     --> This settup comes with MongoDB, memcache, varnish and APC modules enabled by default,
     if you are experimenting issues, try disabling them first. To do so, try:
     
-    Change directory  to:
+    Change directory  to your site directory (e.g /www/agronet )
     $ cd __YOUR_SITE_DIRECTORY__
 
     $ drush pm-disable -y varnish
@@ -206,9 +208,9 @@ Installation
     
     Install module upgrades:
     
-    ( from your site directory )
-    
     Either  with Drush:
+
+    ( from your site directory )
     $ drush cc all
     $ drush updb
     
@@ -217,7 +219,7 @@ Installation
     Point your browser to: http://__YOR_SITE_URL__/update.php
      
 
-Enabling Varnish & Memcached to work with Drupal:
+Enabling Varnish & Memcached:
 --
 
     Change directory  to:
@@ -237,8 +239,7 @@ Upgrading your Drupal Core or your Drupal Commons Core
     
     Continue with Step 2 of Section Installation (above), use __YOUR_NEW_LATEST_DATABASE__ 
     instead of __LATEST_DATABASE__ (all your data, and articles will be saved)
-        
-    
+            
 
 Other projects used
 --
@@ -259,12 +260,12 @@ Other projects used
 To-Do List
 --
 
-https://github.com/julianromerajuarez/drupal-voa3rinstaller/wiki/TODO
+(ToDo Wiki|https://github.com/julianromerajuarez/drupal-voa3rinstaller/wiki/TODO)
 
 Troubleshooting
 --
 
-https://github.com/julianromerajuarez/drupal-voa3rinstaller/wiki/Troubleshooting
+(TroubleShooting Wiki|https://github.com/julianromerajuarez/drupal-voa3rinstaller/wiki/Troubleshooting)
 
 License
 --
