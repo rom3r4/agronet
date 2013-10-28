@@ -147,23 +147,23 @@ Installation
     
     Change directoyry to /tmp
     $ cd /tmp
-    $ git clone https://github.com/julianromerajuarez/drupal-voa3rinstaller.git ./__CHOOSE_NAME__
+    $ git clone https://github.com/julianromerajuarez/drupal-voa3rinstaller.git ./__TMP_NAME__
     ...
     
-    $ cd ./__CHOOSE_NAME__
+    $ cd ./__TMP_NAME__
     $ ./make-voa3r.sh 
     ...
     
-    Copy generated installation to /www/agronet
-    $ cp -R ./tmp/__CHOOSE_NAME__ ./tmp/agronet
+    Copy generated installation to /www/__YOUR_SITE_NAME__ (e.g /www/agronet )
+    $ cp -R ./tmp/__TMP_NAME__ ./tmp/__YOUR_SITE_NAME__ 
     
-    $ mv ./tmp/agronet /www
+    $ mv ./tmp/__YOUR_SITE_NAME__ /www
     
     Copy scripts to destination directory
     
-    $ cd /tmp/newvoa3r
-    $ copy *.sh /www/agronet
-    $ copy *.ini /www/agronet
+    $ cd /tmp/__TMP_NAME__
+    $ copy *.sh /www/__YOUR_SITE_NAME__
+    $ copy *.ini /www/__YOUR_SITE_NAME__
     
     
     
@@ -172,15 +172,15 @@ Installation
          credentials: your database name is __YOUR_DATABASE__  -- you can change this in first step
 
     
-    Resquest file, __LATEST_DATABASE__.sql.tar.gz (not provided here)
+    Resquest file, __LATEST_DATABASE__.sql.tar.gz ( not provided here )
     $ tar -xzvf ./__LATEST_DATABASE__.sql.tar.gz
     
-    $ ls LATEST_DATABASE.sql
-    LATEST_DATABASE.sql
+    $ ls __LATEST_DATABASE__.sql
+    __LATEST_DATABASE__.sql
     
     
     ( The ommand bellow will load __LATEST_DATABASE__ database into your site )
-    $ ./conf-voa3r.sh /www/agronet ./LATEST_DATABASE.sql 
+    $ ./conf-voa3r.sh /www/agronet ./__LATEST_DATABASE__.sql 
     ...
 
     ( Check that /www/newvoa3r/sites/default/settings.php contains the same database credentials 
@@ -226,10 +226,11 @@ Enabling Varnish & Memcached:
     $ cd __YOUR_SITE_DIRECTORY__
    
     $ vi settings.inc 
-    --> remove the comments at the beggining and at the end 
+    --> remove the comments at the beginning and at the end 
       
 
 Upgrading your Drupal Core or your Drupal Commons Core
+--
 
     Change directory  to:
     $ cd __YOUR_SITE_DIRECTORY__
