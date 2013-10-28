@@ -241,21 +241,21 @@ Upgrading your Drupal Core or your Drupal Commons Core
     instead of __LATEST_DATABASE__ (all your data, and articles will be saved)
             
 
-Other projects used
+Links
 --
 
-- Drupal 7
-- Drupal Commons 3
-- NGINX / Apache2 + PHP FastCGI + MySQL +  MongoDB
-- Apache Solr
-- Memcached
-- APC
-- Varnish
-- CDNs
-- Bootstrap 2
-- Honeypot Captcha
-- Tested for Usability
-- Tested for Scalability
+- [Drupal 7](https://drupal.org/drupal-7.0)
+- [Drupal Commons 3](http://www.acquia.com/demo-drupal-commons-3)
+- [NGINX]() / [Apache2]() + [PHP5 FastCGI]() + [MySQL]() + [MongoDB]()
+- [Apache Solr](http://lucene.apache.org/solr/)
+- [Memcached](http://memcached.org/)
+- [APC](http://en.wikipedia.org/wiki/List_of_PHP_accelerators)
+- [Varnish](https://www.varnish-cache.org/)
+- [CDN](http://en.wikipedia.org/wiki/Content_delivery_network)
+- [Bootstrap 2](http://getbootstrap.com/2.3.2/)
+- [Honeypot Captcha](http://en.wikipedia.org/wiki/Honeypot_(computing))
+- Usability Tests
+- [Scalability Tests](https://github.com/julianromerajuarez/apachesolr-benchs)
 
 To-Do List
 --
