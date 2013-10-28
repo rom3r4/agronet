@@ -1,9 +1,9 @@
 [drupal-voa3rinstaller](#)
 --
 
-New-Voa3r (AgroNet) Intaller script
+Automated Drupal-Commons Profile Installer
 
-Site Demo
+Demo
 --
 
 A current live snapshot can be seen on http://agronet2.appgee.net (Open-Alpha version)
@@ -12,7 +12,7 @@ Requirements
 --
 
 - Drush
-- Drush make  
+- Drush Make  
 - memcached (Optional)
 - APC (Optional)
 - Varnish (Optional)
@@ -195,28 +195,50 @@ Installation
     --> This settup comes with MongoDB, memcache, varnish and APC modules enabled by default,
     if you are experimenting issues, try disabling them first. To do so, try:
     
-    ( From your drupal directory )
+    Change directory  to:
+    $ cd __YOUR_SITE_DIRECTORY__
+
     $ drush pm-disable -y varnish
     $ drush pm-disable -y memcache
-    ..
-    ( mongoDB should be disabled manually )
-
-    If you have those Services (Mamceched, varnish, etc.) installed on your Server, you can try tweaking file
-    /www/newvoa3r/sites/default/include.php to increase you Drupal Setup performance 
     
+    Disable mongoDB module manually at http://__YOUR_SITE_URL__/admin/modules
 
-Activating Optional Services:
+    
+    Install module upgrades:
+    
+    ( from your site directory )
+    
+    Either  with Drush:
+    $ drush cc all
+    $ drush updb
+    
+    Or manually:
+    
+    Point your browser to: http://__YOR_SITE_URL__/update.php
+     
+
+Enabling Varnish & Memcached to work with Drupal:
 --
 
-   To activate Memcached & varnish in your Drupal installation
-   ( you will get a performance increase)
+    Change directory  to:
+    $ cd __YOUR_SITE_DIRECTORY__
    
-   Change directory  to:
-   $ cd /www/agronet/sites/default
-   
-   $ vi settings.inc 
-   --> remove the comments at the beggining and at the end 
+    $ vi settings.inc 
+    --> remove the comments at the beggining and at the end 
       
+
+Upgrading your Drupal Core or your Drupal Commons Core
+
+    Change directory  to:
+    $ cd __YOUR_SITE_DIRECTORY__
+
+    Save your database:
+    $ drush sql-dump --result-file=/__YOUR_BACKUPS_DIRECTORY__/__YOUR_NEW_LATEST_DATABASE__.sql
+    
+    Continue with Step 2 of Section Installation (above), use __YOUR_NEW_LATEST_DATABASE__ 
+    instead of __LATEST_DATABASE__ (all your data, and articles will be saved)
+        
+    
 
 Other projects used
 --
@@ -229,9 +251,8 @@ Other projects used
 - APC
 - Varnish
 - CDNs
-- Bootstrap 2 
-- Honeypot Captcha 
-
+- Bootstrap 2
+- Honeypot Captcha
 - Tested for Usability
 - Tested for Scalability
 
