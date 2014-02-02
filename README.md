@@ -10,8 +10,8 @@ A current live snapshot can be seen on [on this link](http://agronet2.appgee.net
 
 - xamp(*) (Debian GNU/Linux preferred)
 - Git
-- Drush
-- Drush Make  
+- [Drush](//github.com/drush-ops/drush) `>= version 6.x``
+
 
 (*) x=(Windows/Linux/Mac OS)-(Apache/Nginx)-MySQL-PHP
 
