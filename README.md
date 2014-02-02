@@ -129,4 +129,7 @@ University of Alcala
 
 ###License
 
-Licensed under GNU/ GPL version 2 License  
+Licensed under GPL/ GNU version 2 License. For more information, 
+see the accompanying LICENSE file.  
+
+
