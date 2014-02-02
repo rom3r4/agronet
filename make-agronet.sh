@@ -12,10 +12,10 @@ PROFILE_DIR="./tmp/commons-profile"
 # git clone default repositories and enter your name here to get write access 
 #
 MAIN_REPO="git@github.com:julianromera"
-PROFILE_REPOSITORY="${MAIN_REPO}/drupal-voa3rprofile.git"
-MODULES_REPOSITORY="${MAIN_REPO}/drupal-voa3rmodules.git"
-THEME_REPOSITORY="${MAIN_REPO}/julianromera/drupal-voa3rtweme.git"
-LIBRARIES_REPOSITORY="${MAIN_REPO}/drupal-voa3rlibraries.git"
+PROFILE_REPOSITORY="${MAIN_REPO}/agronet-profile.git"
+MODULES_REPOSITORY="${MAIN_REPO}/agronet-modules.git"
+THEME_REPOSITORY="${MAIN_REPO}/agronet-theme.git"
+LIBRARIES_REPOSITORY="${MAIN_REPO}/agronet-libraries.git"
 
 
 echo "this process may take some minutes :/ .. please be patient :-)"
