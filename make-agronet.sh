@@ -11,17 +11,18 @@ PROFILE_DIR="./tmp/commons-profile"
 #
 # git clone default repositories and enter your name here to get write access 
 #
-YOUR_PROFILE_REPOSITORY="https://github.com/julianrome/drupal-voa3rprofile.git"
-YOUR_MODULES_REPOSITORY="https://github.com/julianromera/drupal-voa3rmodules.git"
-YOUR_THEME_REPOSITORY="https://github.com/julianromera/drupal-voa3rtweme.git"
-YOUR_LIBRARIES_REPOSITORY="https://github.com/julianromera/drupal-voa3rlibraries.git"
+MAIN_REPO="git@github.com:julianromera"
+PROFILE_REPOSITORY="${MAIN_REPO}/drupal-voa3rprofile.git"
+MODULES_REPOSITORY="${MAIN_REPO}/drupal-voa3rmodules.git"
+THEME_REPOSITORY="${MAIN_REPO}/julianromera/drupal-voa3rtweme.git"
+LIBRARIES_REPOSITORY="${MAIN_REPO}/drupal-voa3rlibraries.git"
 
 
 echo "this process may take some minutes :/ .. please be patient :-)"
 
 echo -n "Creating commons profile..."
 rm -rf ${PROFILE_DIR}
-git clone --branch 7.x-3.x ${YOUR_PROFILE_REPOSITORY} ${PROFILE_DIR}
+git clone --branch 7.x-3.x ${PROFILE_REPOSITORY} ${PROFILE_DIR}
 echo "done."
 
 echo -n "Deploying Agronet..."
@@ -43,15 +44,15 @@ echo "done."
 
 echo "Installing contrib modules, themes & libraries in ${FINAL_DIR}/sites/all/modules..."
 rm -rf ${FINAL_DIR}/sites/all/modules
-git clone ${YOUR_MODULES_REPOSITORY} ${FINAL_DIR}/sites/all/modules
+git clone ${MODULES_REPOSITORY} ${FINAL_DIR}/sites/all/modules
 
 rm -rf ${FINAL_DIR}/sites/all/themes
 mkdir ${FINAL_DIR}/sites/all/themes
-git clone ${YOUR_THEME_REPOSITORY} ${FINAL_DIR}/sites/all/themes/tweme
+git clone ${THEME_REPOSITORY} ${FINAL_DIR}/sites/all/themes/tweme
 
 rm -rf ${FINAL_DIR}/sites/all/libraries
 mkdir ${FINAL_DIR}/sites/all/libraries
-git clone ${YOUR_LIBRARIES_REPOSITORY} ${FINAL_DIR}/sites/all/libraries
+git clone ${LIBRARIES_REPOSITORY} ${FINAL_DIR}/sites/all/libraries
 
 echo "done."
 
