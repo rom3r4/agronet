@@ -50,10 +50,9 @@ A current live snapshot can be seen on [on this link](http://agronet2.appgee.net
     $ copy *.ini /www/__YOUR_SITE_NAME__
     
     
-    
-    ( Point your browser to http://loacalhost/agronet/install.php --or your url alias--
-         and selecct Commons Profile ( you may be asked for your MySQL database 
-         credentials: your database name is __YOUR_DATABASE__  -- you can change this in first step
+    $ cd /www/__YOUR_SITE_NAME__ 
+    $ sudo drush site-install comons --account-name=admin --account-pass=admin
+    --db-url=mysql:/__MYSQLUSER__:__MYSQLPASSWORD__@localhost/__YOUR_DATABASE__
 
     
     Resquest file, __LATEST_DATABASE__.sql.tar.gz ( not provided here )
