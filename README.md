@@ -64,7 +64,7 @@ A current live snapshot can be seen on [on this link](http://agronet2.appgee.net
     
     
     ( The ommand bellow will load __LATEST_DATABASE__ database into your site )
-    $ ./conf-voa3r.sh /www/agronet ./__LATEST_DATABASE__.sql 
+    $ ./conf-agronet.sh /www/agronet ./__LATEST_DATABASE__.sql 
     ...
 
     ( Check that /www/__YOUR_SITE_NAME__/sites/default/settings.php contains the same database credentials 
@@ -121,11 +121,11 @@ A current live snapshot can be seen on [on this link](http://agronet2.appgee.net
 
 ###Troubleshooting
 
-[TroubleShooting Wiki](https://github.com/julianromerajuarez/drupal-voa3rinstaller/wiki/Troubleshooting)
+[TroubleShooting Wiki](https://github.com/julianromera/agronet/wiki/Troubleshooting)
 
 ###Author
 
-University of Alcalá
+University of Alcala
 
 ###License
 
