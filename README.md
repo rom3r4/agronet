@@ -1,143 +1,26 @@
-[drupal-voa3rinstaller](#)
---
+###[drupal-voa3rinstaller](#)
 
-Automated Drupal-Commons Profile Installer
+Agronet's Drupal Installation Profile
 
-Demo
---
+###Demo Prototype
 
-A current live snapshot can be seen on [Demo](http://agronet2.appgee.net) (Open-Alpha version)
+A current live snapshot can be seen on [on this link](http://agronet2.appgee.net)
 
-Requirements
---
+###Requirements
 
+- xamp or xemp(*) (Debian GNU/Linux Lemp preferred)
 - Drush
 - Drush Make  
-- memcached (Optional)
-- APC (Optional)
-- Varnish (Optional)
-- mongoDB (Optional) 
 
-Verifying Requirements are installed
---
+(*) x=(Windows/Linux/mac)-a,e=(Apache/Nginx)-MySQL-PHP
 
-    Drush 
     
-    $ sudo drush --version
-    drush version 5.9
-    
-    Drush make
-    
-    $ sudo drush | grep make
-    Other commands: (make)
-    make                  Turns a makefile into a working Drupal codebase.
-    make-generate         Generate a makefile from the current Drupal site.
-      
-    
-    ( Stop here if your are not using any Optional Requirement )  
-    
-    
-    Memchached (Optional)
-    
-    $ sudo netstat -lnp | grep memcache
-    tcp        0      0 127.0.0.1:11211         0.0.0.0:*               LISTEN      28355/memcached
-    udp        0      0 127.0.0.1:11211         0.0.0.0:*                           28355/memcached
-    
-    Varnish (Optional)
-    
-    $ sudo netstat -lnp | grep varnish
-    tcp        0      0 127.0.0.1:1440          0.0.0.0:*               LISTEN      28679/varnishd
-    tcp        0      0 127.0.0.1:1441          0.0.0.0:*               LISTEN      28678/varnishd
-    
-    APC (Optional)
-    
-    $ sudo php --ini
-    Configuration File (php.ini) Path: /etc/php5/cli
-    Loaded Configuration File:         /etc/php5/cli/php.ini
-    Scan for additional .ini files in: /etc/php5/cli/conf.d
-    Additional .ini files parsed:      /etc/php5/cli/conf.d/10-pdo.ini,
-    /etc/php5/cli/conf.d/20-apc.ini,    <--------------
-    /etc/php5/cli/conf.d/20-curl.ini,
-    /etc/php5/cli/conf.d/20-gd.ini,
-    /etc/php5/cli/conf.d/20-memcache.ini,
-    /etc/php5/cli/conf.d/20-memcached.ini,
-    /etc/php5/cli/conf.d/20-mysql.ini,
-    /etc/php5/cli/conf.d/20-mysqli.ini,
-    /etc/php5/cli/conf.d/20-pdo_mysql.ini,
-    /etc/php5/cli/conf.d/20-xdebug.ini,
-    /etc/php5/cli/conf.d/@20-mongo.ini,
-    /etc/php5/cli/conf.d/imagick.ini
-    
-    
-    MongoDB (Optional)
-    
-    $ sudo netstat -lnp | grep mongo
-    tcp        0      0 0.0.0.0:28017           0.0.0.0:*               LISTEN      3546/mongod
-    tcp        0      0 0.0.0.0:27017           0.0.0.0:*               LISTEN      3546/mongod
-    unix  2      [ ACC ]     STREAM     LISTENING     10975    3546/mongod         /tmp/mongodb-
-    
+###Installation  
 
-Installing Requirements (also Optional Reqs)
---
-    (Ubuntu / Debian Linux)
-    
-    First step
-    
-    $ sudo apt-get update
-    
-    Drush and Drush make
-    
-    $ sudo apt-cache search drush
-    drush - command line shell and Unix scripting interface for Drupal
-    drush-make - Drupal source code deployment tool
-    
-    $ sudo apt-get install drush drush-make
-    
-    Memcached (Optional)
-    
-    $ sudo apt-get install memcached 
-    ...
-    ... ? [y/N] y
-    
-    Varnish (Optional)
-    
-    $ sudo apt-get install varnish
-    ...
-    ...? [y/N] y
-    
-    APC (Optional)
-    
-    $ sudo apt-get install php-apc
-    
-    MongoDB
-    
-    $ sudo apt-get install mongodb-server
-    
-    
-Restarting optional Servers / Services
---
 
-    Memcached
-    
-    $ sudo service memcached restart
-    
-    Varnish
-    
-    $ sudo service varnish restart
-    
-    APC
-    
-    $ sudo service apache2 restart
-    or
-    $ sudo service nginx restart
-    
-    MongoDB
-    
-    $ sudo service mongodb restart
+(Tested to work on Debian 7 wheezy)
 
-Installation
---
-    
+
     Create your database:
     $ sudo mysqladmin -uroot -p create __YOUR_DATABASE__
      
@@ -219,18 +102,10 @@ Installation
     Point your browser to: http://__YOR_SITE_URL__/update.php
      
 
-Enabling Varnish & Memcached:
---
-
-    Change directory  to:
-    $ cd __YOUR_SITE_DIRECTORY__
-   
-    $ vi settings.inc 
-    --> remove the comments at the beginning and at the end 
       
 
-Upgrading your Drupal Core or your Drupal Commons Core
---
+###Upgrading Drupal or Drupal-Commons Core
+
 
     Change directory  to:
     $ cd __YOUR_SITE_DIRECTORY__
@@ -242,8 +117,7 @@ Upgrading your Drupal Core or your Drupal Commons Core
     instead of __LATEST_DATABASE__ (all your data, and articles will be saved)
             
 
-Links
---
+###Resources
 
 - [Drupal 7](https://drupal.org/drupal-7.0)
 - [Drupal Commons 3](http://www.acquia.com/demo-drupal-commons-3)
@@ -258,17 +132,15 @@ Links
 - Usability Tests
 - [Scalability Tests](https://github.com/julianromerajuarez/apachesolr-benchs)
 
-To-Do List
---
 
-[TODO Wiki](https://github.com/julianromerajuarez/drupal-voa3rinstaller/wiki/TODO)
-
-Troubleshooting
---
+###Troubleshooting
 
 [TroubleShooting Wiki](https://github.com/julianromerajuarez/drupal-voa3rinstaller/wiki/Troubleshooting)
 
-License
---
+###Author
 
-Copyright University of Alcala. Licensed under GNU/ GPL version 2 License  
+University of Alcalá
+
+###License
+
+Licensed under GNU/ GPL version 2 License  
