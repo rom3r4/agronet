@@ -102,21 +102,6 @@ A current live snapshot can be seen on [on this link](http://agronet2.appgee.net
     Point your browser to: http://__YOR_SITE_URL__/update.php
      
 
-      
-
-###Upgrading Drupal or Drupal-Commons Core
-
-
-    Change directory  to:
-    $ cd __YOUR_SITE_DIRECTORY__
-
-    Save your database:
-    $ drush sql-dump --result-file=/__YOUR_BACKUPS_DIRECTORY__/__YOUR_NEW_LATEST_DATABASE__.sql
-    
-    Continue with Step 2 of Section Installation (above), use __YOUR_NEW_LATEST_DATABASE__ 
-    instead of __LATEST_DATABASE__ (all your data, and articles will be saved)
-            
-
 ###Resources
 
 - [Drupal 7](https://drupal.org/drupal-7.0)
