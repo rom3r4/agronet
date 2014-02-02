@@ -8,11 +8,12 @@ A current live snapshot can be seen on [on this link](http://agronet2.appgee.net
 
 ###Requirements
 
-- xamp or xemp(*) (Debian GNU/Linux Lemp preferred)
+- xamp(*) (Debian GNU/Linux preferred)
+- Git
 - Drush
 - Drush Make  
 
-(*) x=(Windows/Linux/mac)-a,e=(Apache/Nginx)-MySQL-PHP
+(*) x=(Windows/Linux/Mac OS)-(Apache/Nginx)-MySQL-PHP
 
     
 ###Installation  
@@ -25,16 +26,16 @@ A current live snapshot can be seen on [on this link](http://agronet2.appgee.net
     $ sudo mysqladmin -uroot -p create __YOUR_DATABASE__
      
     
-    ( Suppose you plan to install VOA3R at /www/agronet)
+    ( Suppose you plan to install Agronet at /www/agronet)
     $ mkdir /www (if it doesn't exist )
     
     Change directoyry to /tmp
     $ cd /tmp
-    $ git clone https://github.com/julianromerajuarez/drupal-voa3rinstaller.git ./__TMP_NAME__
+    $ git clone https://github.com/julianromera/agronet.git ./__TMP_NAME__
     ...
     
     $ cd ./__TMP_NAME__
-    $ ./make-voa3r.sh 
+    $ ./make-agronet.sh 
     ...
     
     Copy generated installation to /www/__YOUR_SITE_NAME__ (e.g /www/agronet )
@@ -66,7 +67,7 @@ A current live snapshot can be seen on [on this link](http://agronet2.appgee.net
     $ ./conf-voa3r.sh /www/agronet ./__LATEST_DATABASE__.sql 
     ...
 
-    ( Check that /www/newvoa3r/sites/default/settings.php contains the same database credentials 
+    ( Check that /www/__YOUR_SITE_NAME__/sites/default/settings.php contains the same database credentials 
       that you created: database name, user and password )
     ...
 
@@ -91,7 +92,7 @@ A current live snapshot can be seen on [on this link](http://agronet2.appgee.net
     
     Install module upgrades:
     
-    Either  with Drush:
+    Either with Drush:
 
     ( from your site directory )
     $ drush cc all
