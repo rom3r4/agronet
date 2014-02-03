@@ -4,7 +4,7 @@ Agronet's Drupal Installation Profile
 
 ###Demo Prototype
 
-A current live snapshot can be seen on [on this link](http://agronet2.appgee.net)
+A current live snapshot can be seen on [on this link](http://agronet.appgee.net)
 
 ###Requirements
 
