@@ -22,28 +22,25 @@ A current live snapshot can be seen on [on this link](http://agronet.appgee.net)
 (Tested to work on Debian 7 wheezy)
 
 
-    Create your database:
+    --> Create your database:
     $ sudo mysqladmin -uroot -p create __YOUR_DATABASE__
      
     
-    ( Suppose you plan to install Agronet at /www/agronet)
+    --> Suppose you plan to install Agronet at /www/agronet
     $ mkdir /www (if it doesn't exist )
     
-    Change directoyry to /tmp
     $ cd /tmp
     $ git clone https://github.com/julianromera/agronet.git ./__TMP_NAME__
-    ...
-    
+
     $ cd ./__TMP_NAME__
     $ ./make-agronet.sh 
-    ...
-    
-    Copy generated installation to /www/__YOUR_SITE_NAME__ (e.g /www/agronet )
+
+    --> Copy generated installation to /www/__YOUR_SITE_NAME__ (e.g /www/agronet )
     $ cp -R ./tmp/__TMP_NAME__ ./tmp/__YOUR_SITE_NAME__ 
     
     $ mv ./tmp/__YOUR_SITE_NAME__ /www
     
-    Copy scripts to destination directory
+    --> Copy scripts to destination directory
     
     $ cd /tmp/__TMP_NAME__
     $ copy *.sh /www/__YOUR_SITE_NAME__
@@ -54,25 +51,22 @@ A current live snapshot can be seen on [on this link](http://agronet.appgee.net)
     $ sudo drush site-install comons --account-name=admin --account-pass=admin
     --db-url=mysql:/__MYSQLUSER__:__MYSQLPASSWORD__@localhost/__YOUR_DATABASE__
 
+    $ wget https://github.com/julianromera/agronet-database/raw/master/agronet-db.sql.tar
+    $ tar -xzvf agronet-db.sql.tar
     
-    Resquest file, __LATEST_DATABASE__.sql.tar.gz ( not provided here )
-    $ tar -xzvf ./__LATEST_DATABASE__.sql.tar.gz
-    
-    $ ls __LATEST_DATABASE__.sql
-    __LATEST_DATABASE__.sql
+    $ ls agronet-db.sql
+    agronet-db.sql
     
     
-    ( The ommand bellow will load __LATEST_DATABASE__ database into your site )
-    $ ./conf-agronet.sh /www/agronet ./__LATEST_DATABASE__.sql 
-    ...
+    ( The ommand bellow will load ´´agronet-db.sql´´ database into your site )
+    $ ./conf-agronet.sh /www/agronet ./agronet-db.sql 
 
-    ( Check that /www/__YOUR_SITE_NAME__/sites/default/settings.php contains the same database credentials 
-      that you created: database name, user and password )
-    ...
+    --> Check that /www/__YOUR_SITE_NAME__/sites/default/settings.php contains the same database 
+      credentials that you created: database name, user and password
 
     $ ./postinstall __YOUR_SITE_DIRECTORY__
     
-    ( remove installation scripts )
+    --> remove installation scripts
     $ cd __YOUR_SITE_DIRECTORY__
     $ rm *.sh
     $ rm *.ini 
@@ -80,24 +74,23 @@ A current live snapshot can be seen on [on this link](http://agronet.appgee.net)
     --> This settup comes with MongoDB, memcache, varnish and APC modules enabled by default,
     if you are experimenting issues, try disabling them first. To do so, try:
     
-    Change directory  to your site directory (e.g /www/agronet )
-    $ cd __YOUR_SITE_DIRECTORY__
 
+    $ cd __YOUR_SITE_DIRECTORY__
     $ drush pm-disable -y varnish
     $ drush pm-disable -y memcache
     
     Disable mongoDB module manually at http://__YOUR_SITE_URL__/admin/modules
 
-    
     Install module upgrades:
     
-    Either with Drush:
+    - Either with Drush:
 
-    ( from your site directory )
+    $ cd __YOUR_SITE_DIRECTORY__ 
     $ drush cc all
     $ drush updb
     
-    Or manually:
+    Or 
+    - Manually:
     
     Point your browser to: http://__YOR_SITE_URL__/update.php
      
