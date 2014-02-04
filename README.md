@@ -58,7 +58,7 @@ A current live snapshot can be seen on [on this link](http://agronet.appgee.net)
     agronet-db.sql
     
     
-    --> The command bellow will load ´´agronet-db.sql´´ database into your site
+    --> The command bellow will load ``agronet-db.sql`` database into your site
     $ ./conf-agronet.sh /www/agronet ./agronet-db.sql 
 
     --> Check that /www/__YOUR_SITE_NAME__/sites/default/settings.php contains the same database 
