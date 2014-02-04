@@ -63,7 +63,8 @@ A current live snapshot can be seen on [on this link](http://agronet.appgee.net)
     $ cd /www/__YOUR_SITE_NAME__
     $ ./postinstall /www/__YOUR_SITE_NAME__
     
-    ! ( tis will change in next update)
+    --------- THIS WILL BE CHANGED ON NEXT UPDATE ---------
+    
     - This setup comes with MongoDB, memcache, varnish and APC modules enabled by default,
     if you are experimenting issues, try disabling them first:
     
