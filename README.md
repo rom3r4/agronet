@@ -4,14 +4,14 @@ Agronet's Drupal Installation Profile
 
 ###Demo Prototype
 
-A current live snapshot can be seen on [on this link](http://agronet2.appgee.net)
+A current live snapshot can be seen on [on this link](http://agronet.appgee.net)
 
 ###Requirements
 
 - xamp(*) (Debian GNU/Linux preferred)
 - Git
-- Drush
-- Drush Make  
+- [Drush](//github.com/drush-ops/drush) `>= version 6.x``
+
 
 (*) x=(Windows/Linux/Mac OS)-(Apache/Nginx)-MySQL-PHP
 
@@ -22,83 +22,67 @@ A current live snapshot can be seen on [on this link](http://agronet2.appgee.net
 (Tested to work on Debian 7 wheezy)
 
 
-    Create your database:
-    $ sudo mysqladmin -uroot -p create __YOUR_DATABASE__
+    - Create your database:
+    $ sudo mysqladmin -uroot -p create __YOUR_DATABASE_NAME__
      
-    
-    ( Suppose you plan to install Agronet at /www/agronet)
-    $ mkdir /www (if it doesn't exist )
-    
-    Change directoyry to /tmp
     $ cd /tmp
-    $ git clone https://github.com/julianromera/agronet.git ./__TMP_NAME__
-    ...
-    
-    $ cd ./__TMP_NAME__
+    $ git clone https://github.com/julianromera/agronet.git 
+
+    $ cd /tmp/agronet
     $ ./make-agronet.sh 
-    ...
     
-    Copy generated installation to /www/__YOUR_SITE_NAME__ (e.g /www/agronet )
-    $ cp -R ./tmp/__TMP_NAME__ ./tmp/__YOUR_SITE_NAME__ 
+    - Suppose you plan to install Agronet in /www/__YOUR_SITE_NAME__
     
-    $ mv ./tmp/__YOUR_SITE_NAME__ /www
+    $ mkdir -p /www/__YOUR_SITE_NAME__ 
+    $ cp -R /tmp/agronet/tmp/__YOUR_SITE_NAME__ /www 
     
-    Copy scripts to destination directory
+
+    - Copy scripts to destination directory
     
-    $ cd /tmp/__TMP_NAME__
+    $ cd /tmp/agronet
     $ copy *.sh /www/__YOUR_SITE_NAME__
     $ copy *.ini /www/__YOUR_SITE_NAME__
     
+    - Auto-install site
     
-    
-    ( Point your browser to http://loacalhost/agronet/install.php --or your url alias--
-         and selecct Commons Profile ( you may be asked for your MySQL database 
-         credentials: your database name is __YOUR_DATABASE__  -- you can change this in first step
+    $ cd /www/__YOUR_SITE_NAME__ 
+    $ sudo drush site-install commons --account-name=admin --account-pass=admin
+    --db-url=mysql:/__MYSQLUSER__:__MYSQLPASSWORD__@localhost/__YOUR_DATABASE_NAME__
 
+    - Install database
     
-    Resquest file, __LATEST_DATABASE__.sql.tar.gz ( not provided here )
-    $ tar -xzvf ./__LATEST_DATABASE__.sql.tar.gz
+    $ wget https://github.com/julianromera/agronet-database/raw/master/agronet-db.sql.tar
+    $ tar -xzvf agronet-db.sql.tar
     
-    $ ls __LATEST_DATABASE__.sql
-    __LATEST_DATABASE__.sql
-    
-    
-    ( The ommand bellow will load __LATEST_DATABASE__ database into your site )
-    $ ./conf-agronet.sh /www/agronet ./__LATEST_DATABASE__.sql 
-    ...
+    $ cd /www/__YOUR_SITE_NAME__
+    $ ./conf-agronet.sh /www/agronet ./agronet-db.sql 
 
-    ( Check that /www/__YOUR_SITE_NAME__/sites/default/settings.php contains the same database credentials 
-      that you created: database name, user and password )
-    ...
+    - Check that /www/__YOUR_SITE_NAME__/sites/default/settings.php contains the same database 
+      credentials that you created: database name, user and password
 
-    $ ./postinstall __YOUR_SITE_DIRECTORY__
+    $ cd /www/__YOUR_SITE_NAME__
+    $ ./postinstall /www/__YOUR_SITE_NAME__
     
-    ( remove installation scripts )
-    $ cd __YOUR_SITE_DIRECTORY__
-    $ rm *.sh
-    $ rm *.ini 
-
-    --> This settup comes with MongoDB, memcache, varnish and APC modules enabled by default,
-    if you are experimenting issues, try disabling them first. To do so, try:
+    --------- THIS WILL BE CHANGED ON NEXT UPDATE ---------
     
-    Change directory  to your site directory (e.g /www/agronet )
-    $ cd __YOUR_SITE_DIRECTORY__
-
+    - This setup comes with MongoDB, memcache, varnish and APC modules enabled by default,
+    if you are experimenting issues, try disabling them first:
+    
+    $ cd /www/__YOUR_SITE_NAME__
     $ drush pm-disable -y varnish
     $ drush pm-disable -y memcache
     
-    Disable mongoDB module manually at http://__YOUR_SITE_URL__/admin/modules
+    - Disable mongoDB module manually at http://__YOUR_SITE_URL__/admin/modules
 
+    - Install module upgrades:
     
-    Install module upgrades:
-    
-    Either with Drush:
+    a. Using Drush:
 
-    ( from your site directory )
+    $ cd /www/__YOUR_SITE_NAME__ 
     $ drush cc all
     $ drush updb
     
-    Or manually:
+    b. Or manually:
     
     Point your browser to: http://__YOR_SITE_URL__/update.php
      
