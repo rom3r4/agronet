@@ -1,12 +1,18 @@
 #!/bin/sh
 
-# @author: jul
-# @copyright: jul 
-# @licence: UNLICENCED
-
 # --> NO trailing slash at end
 FINAL_DIR="./tmp/agronet"
 PROFILE_DIR="./tmp/commons-profile"
+
+if [ -d $PROFILE_DIR ] || [ -f $PROFILE_DIR ];then
+  echo "Profile dir (${PROFILE_DIR}) should not exist"
+  exit 1;
+fi
+
+if [ -d $FINAL_DIR ] || [ -f $FINAL_DIR ];then
+  echo "Final dir (${FINAL_DIR})should not exist"
+  exit 1;
+fi
 
 #
 # git clone default repositories and enter your name here to get write access 

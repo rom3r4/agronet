@@ -1,0 +1,21 @@
+name = Commons Q&A Pages
+description = Page layout settings for individual Question and Answe pages
+core = 7.x
+package = Commons - Landing pages
+dependencies[] = ctools
+dependencies[] = panelizer
+dependencies[] = strongarm
+features[ctools][] = panelizer:panelizer:1
+features[ctools][] = strongarm:strongarm:1
+features[features_api][] = api:2
+features[panelizer_defaults][] = node:question:default
+features[variable][] = panelizer_defaults_node_answer
+features[variable][] = panelizer_defaults_node_question
+
+
+; Information added by drush on 2014-02-02
+version = "7.x-3.8+15-dev"
+core = "7.x"
+project = "commons"
+datestamp = "1391327006"
+
