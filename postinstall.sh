@@ -44,6 +44,7 @@ drush $R pm-disable paranoia
 # Uninstall
 drush $R pm-uninstall navbar
 drush $R pm-uninstall paranoia 
+drush $R pm-uninstall dblog
 
 # Install
 drush $R dl admin_menu
