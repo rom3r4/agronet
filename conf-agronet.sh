@@ -2,9 +2,6 @@
 
 echo "usage: $0 -x <your_fresh_and_running_drupal_directory> <mysql_dump_file.sql>"
 echo ""
-echo "ps: If you havent 'drush' installed, you'll need it to continue"
-echo "(# apt-get install drush)"
-echo ""
 
 # echo -n "Installing 'Backup and Migrate' module..."
 # drush --root=$0 dl backup_migrate
